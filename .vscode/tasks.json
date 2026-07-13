@@ -1,0 +1,87 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Jekyll: Install dependencies",
+      "type": "process",
+      "command": "bundle",
+      "args": ["install"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      }
+    },
+    {
+      "label": "Jekyll: Serve",
+      "type": "process",
+      "command": "bundle",
+      "args": [
+        "exec",
+        "jekyll",
+        "serve",
+        "--livereload",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "4000",
+        "--baseurl",
+        ""
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "JEKYLL_ENV": "development"
+        }
+      },
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "jekyll",
+        "pattern": {
+          "regexp": "^(?!)$"
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "^\\s*Configuration file:",
+          "endsPattern": "^\\s*Server running"
+        }
+      },
+      "presentation": {
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "clear": true,
+        "showReuseMessage": false
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "Jekyll: Build production site",
+      "type": "process",
+      "command": "bundle",
+      "args": ["exec", "jekyll", "build", "--trace"],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "JEKYLL_ENV": "production"
+        }
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      }
+    }
+  ]
+}

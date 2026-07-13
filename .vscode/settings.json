@@ -1,0 +1,26 @@
+{
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "workbench.browser.openLocalhostLinks": true,
+  "workbench.browser.showInTitleBar": true,
+  "files.associations": {
+    "Gemfile": "ruby"
+  },
+  "files.exclude": {
+    "_site": true,
+    ".jekyll-cache": true,
+    ".sass-cache": true
+  },
+  "search.exclude": {
+    "_site": true,
+    ".jekyll-cache": true,
+    ".sass-cache": true
+  },
+  "files.watcherExclude": {
+    "**/_site/**": true,
+    "**/.jekyll-cache/**": true,
+    "**/.sass-cache/**": true
+  },
+  "[markdown]": {
+    "editor.wordWrap": "on"
+  }
+}

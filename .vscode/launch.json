@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Jekyll: Preview in VS Code",
+      "type": "editor-browser",
+      "request": "launch",
+      "url": "http://127.0.0.1:4000/",
+      "preLaunchTask": "Jekyll: Serve"
+    }
+  ]
+}
