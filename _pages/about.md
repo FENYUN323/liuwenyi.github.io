@@ -17,9 +17,11 @@ Before joining HKU, I received my B.Eng. in Communication Engineering from [Harb
 
 During my undergraduate studies, I served as **vice captain** of the Critical HIT robotics team and helped the team win the **ICRA RoboMaster AI Challenge World Championship** in 2021. In 2022, I became **team captain** and led the team to successfully <span class="about-award-highlight">defend the world championship title</span>.
 
-[Google Scholar](https://scholar.google.com/citations?user=vtPuO3kAAAAJ) · [GitHub](https://github.com/FENYUN323) · [Bilibili](https://space.bilibili.com/1679529247?spm_id_from=333.337.0.0) · [Linkedin](https://www.linkedin.com/in/wenyi-liu-0062032a5/) · [Download CV]({{ site.baseurl }}/files/CV_Wenyi_Liu.pdf)
+[Google Scholar](https://scholar.google.com/citations?user=vtPuO3kAAAAJ) · [GitHub](https://github.com/FENYUN323) · [Bilibili](https://space.bilibili.com/1679529247?spm_id_from=333.337.0.0) · [YouTube](https://www.youtube.com/@fenyun323) · [Linkedin](https://www.linkedin.com/in/wenyi-liu-0062032a5/) · [Download CV]({{ site.baseurl }}/files/CV_Wenyi_Liu.pdf)
 
 ## Selected Publications
+
+For more details about the research behind these publications, please visit the [Research]({{ site.baseurl }}/portfolio/) page.
 
 {% include selected-publications.html %}
 

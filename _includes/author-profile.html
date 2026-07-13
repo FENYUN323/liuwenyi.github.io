@@ -87,6 +87,14 @@
       {% if author.bilibili %}
         <li><a href="{{ author.bilibili }}"><i class="fab fa-fw fa-bilibili icon-pad-right" aria-hidden="true"></i>Bilibili</a></li>
       {% endif %}
+      {% if author.youtube %}
+        {% if author.youtube contains "://" %}
+          {% assign youtube_url = author.youtube %}
+        {% else %}
+          {% capture youtube_url %}https://www.youtube.com/user/{{ author.youtube }}{% endcapture %}
+        {% endif %}
+        <li><a href="{{ youtube_url | escape }}"><i class="fab fa-fw fa-youtube icon-pad-right" aria-hidden="true"></i>YouTube</a></li>
+      {% endif %}
       {% if author.kaggle %}
         <li><a href="https://kaggle.com/{{ author.kaggle }}"><i class="fab fa-fw fa-kaggle icon-pad-right" aria-hidden="true"></i>Kaggle</a></li>
       {% endif %}      
@@ -160,9 +168,6 @@
       {% endif %}                
       {% if author.xing %}
         <li><a href="https://www.xing.com/profile/{{ author.xing }}"><i class="fab fa-fw fa-xing icon-pad-right" aria-hidden="true"></i>XING</a></li>
-      {% endif %}
-      {% if author.youtube %}
-        <li><a href="https://www.youtube.com/user/{{ author.youtube }}"><i class="fab fa-fw fa-youtube icon-pad-right" aria-hidden="true"></i>YouTube</a></li>
       {% endif %}
       {% if author.zhihu %}
       <li><a href="{{ author.zhihu }}"><i class="fab fa-fw fa-zhihu icon-pad-right" aria-hidden="true"></i>Zhihu</a></li>
