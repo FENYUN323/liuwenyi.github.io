@@ -1043,9 +1043,9 @@ html.award-lightbox-open body {
   }
 }
 
-.research-video__links,
-.research-project__resources {
+.page__content .research-project__actions {
   display: flex;
+  max-width: 100%;
   flex-wrap: wrap;
   gap: 0.6em;
   margin-top: 0.85em;
@@ -1053,6 +1053,7 @@ html.award-lightbox-open body {
   a,
   span {
     display: inline-flex;
+    flex: 0 0 auto;
     align-items: center;
     gap: 0.35em;
     padding: 0.35em 0.75em;
@@ -1062,6 +1063,7 @@ html.award-lightbox-open body {
     font-weight: 600;
     line-height: 1.2;
     text-decoration: none;
+    white-space: nowrap;
   }
 
   a:hover,
@@ -1076,10 +1078,6 @@ html.award-lightbox-open body {
     border-color: $border-color;
     cursor: not-allowed;
   }
-}
-
-.research-project__resources {
-  margin-top: 1em;
 }
 
 @media (prefers-reduced-motion: reduce) {

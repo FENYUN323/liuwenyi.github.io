@@ -53,7 +53,9 @@
   {% if youtube_id != "" %}
     <div class="research-video__embed">
       <iframe
-        src="https://www.youtube-nocookie.com/embed/{{ youtube_id }}"
+        class="js-research-youtube"
+        data-youtube-id="{{ youtube_id | escape }}"
+        src="https://www.youtube-nocookie.com/embed/{{ youtube_id | escape }}?enablejsapi=1&amp;playsinline=1&amp;rel=0&amp;origin={{ site.url | escape }}"
         title="YouTube video for {{ project.title | escape }}"
         loading="lazy"
         referrerpolicy="strict-origin-when-cross-origin"
@@ -67,21 +69,18 @@
     </div>
   {% endif %}
 
-  <div class="research-video__links" aria-label="Video links">
+  <div class="research-project__actions" role="group" aria-label="Research links">
     {% if youtube_url != "" %}
-      <a href="{{ youtube_url }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube" aria-hidden="true"></i> YouTube</a>
+      <a href="{{ youtube_url | escape }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube" aria-hidden="true"></i> YouTube</a>
     {% else %}
       <span class="is-disabled" aria-disabled="true"><i class="fab fa-youtube" aria-hidden="true"></i> YouTube</span>
     {% endif %}
     {% if bilibili_url != "" %}
-      <a href="{{ bilibili_url }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-bilibili" aria-hidden="true"></i> Bilibili</a>
+      <a href="{{ bilibili_url | escape }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-bilibili" aria-hidden="true"></i> Bilibili</a>
     {% else %}
       <span class="is-disabled" aria-disabled="true"><i class="fab fa-bilibili" aria-hidden="true"></i> Bilibili</span>
     {% endif %}
-  </div>
-
-  <div class="research-project__resources" aria-label="Project resources">
-    {% if paper_url != "" %}<a href="{{ paper_url }}">Paper</a>{% endif %}
-    {% if code_url != "" %}<a href="{{ code_url }}">Code</a>{% endif %}
+    {% if paper_url != "" %}<a href="{{ paper_url | escape }}">Paper</a>{% endif %}
+    {% if code_url != "" %}<a href="{{ code_url | escape }}">Code</a>{% endif %}
   </div>
 </section>
