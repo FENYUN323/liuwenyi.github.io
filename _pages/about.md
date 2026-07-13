@@ -15,13 +15,6 @@ Before joining HKU, I received my B.Eng. in Communication Engineering from [Harb
 
 [Google Scholar](https://scholar.google.com/citations?user=vtPuO3kAAAAJ) · [GitHub](https://github.com/FENYUN323) · [Download CV]({{ site.baseurl }}/files/CV_Wenyi_Liu.pdf)
 
-## Research Highlights
-
-- **LiDAR-based inspection in the wild:** autonomous slope and infrastructure inspection under dense vegetation and in cluttered environments.
-- **Robust quadrotor navigation:** integrated planning and control in the presence of suddenly appearing obstacles and external disturbances.
-- **Contact-aware flight:** UAV navigation in extremely dense environments through contact-driven adaptation.
-- **Rapid swarm deployment:** catapult-launched quadrotor swarm systems for fast deployment.
-
 ## Selected Publications
 
 - **Wenyi Liu**, Y. Ren, R. Guo, et al. “Slope inspection under dense vegetation using LiDAR-based quadrotors.” *Nature Communications*, 2025. [Paper](https://www.nature.com/articles/s41467-025-62801-y) · [Code](https://github.com/hku-mars/slope_inspection) · [Video](https://www.bilibili.com/video/BV1P7e3zgEaa)
