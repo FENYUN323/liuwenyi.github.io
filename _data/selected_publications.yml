@@ -1,5 +1,5 @@
 - title: "Slope inspection under dense vegetation using LiDAR-based quadrotors"
-  authors: "<strong>Wenyi Liu</strong>, Y. Ren, R. Guo, et al."
+  authors: "<strong>Wenyi Liu</strong>, Yunfan Ren, Rui Guo, Vickie W. W. Kong, Anthony S. P. Hung, Fangcheng Zhu, Yixi Cai, Huajie Wu, Yuying Zou, and Fu Zhang"
   venue: "Nature Communications"
   year: "2025"
   paper: "https://www.nature.com/articles/s41467-025-62801-y"
@@ -15,7 +15,7 @@
       url: "https://www.bilibili.com/video/BV1P7e3zgEaa"
 
 - title: "LiDAR-Based Quadrotor Autonomous Inspection System in Cluttered Environments"
-  authors: "<strong>Wenyi Liu</strong><sup>*</sup>, H. Wu<sup>*</sup>, L. Shi, et al."
+  authors: "<strong>Wenyi Liu</strong><sup>*</sup>, Huajie Wu<sup>*</sup>, Liuyu Shi, Fangcheng Zhu, Yuying Zou, Fanze Kong, and Fu Zhang"
   venue: "IEEE Transactions on Field Robotics"
   year: "2025"
   paper: "https://ieeexplore.ieee.org/document/11145926"
@@ -29,7 +29,7 @@
       url: "https://www.bilibili.com/video/BV1rUawzgE9c"
 
 - title: "Integrated planning and control for quadrotor navigation in presence of suddenly appearing objects and disturbances"
-  authors: "<strong>Wenyi Liu</strong><sup>*</sup>, Y. Ren<sup>*</sup>, and F. Zhang"
+  authors: "<strong>Wenyi Liu</strong><sup>*</sup>, Yunfan Ren<sup>*</sup>, and Fu Zhang"
   venue: "IEEE Robotics and Automation Letters"
   year: "2023"
   paper: "https://ieeexplore.ieee.org/abstract/document/10238764"
@@ -45,7 +45,7 @@
       url: "https://www.bilibili.com/video/BV1NM4y117TH"
 
 - title: "Traversing the Untraversable: Enabling UAV Navigation in the Extremely Dense Wild by Contact-driven Adaptation"
-  authors: "L. Shi<sup>*</sup>, <strong>Wenyi Liu</strong><sup>*</sup>, X. Han, et al."
+  authors: "Liuyu Shi<sup>*</sup>, <strong>Wenyi Liu</strong><sup>*</sup>, Xuesong Han, Yunfan Ren, Longji Yin, Fangcheng Zhu, Nan Chen, and Fu Zhang"
   venue: "IEEE Transactions on Field Robotics"
   year: "2026"
   paper: "https://ieeexplore.ieee.org/document/11573071"
@@ -59,7 +59,7 @@
       url: "https://youtu.be/C_Iw6WcDexE"
 
 - title: "Flying through cluttered and dynamic environments with LiDAR"
-  authors: "H. Wu<sup>*</sup>, <strong>Wenyi Liu</strong><sup>*</sup>, Y. Ren, et al."
+  authors: "Huajie Wu<sup>*</sup>, <strong>Wenyi Liu</strong><sup>*</sup>, Yunfan Ren, Zheng Liu, Hairuo Wei, Fangcheng Zhu, Haotian Li, and Fu Zhang"
   venue: "Advanced Intelligent Systems"
   year: "under review"
   paper: "https://arxiv.org/abs/2504.17569"
