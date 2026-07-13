@@ -4,14 +4,28 @@
   {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.author %}
 {% endif %}
 
+{% if author.avatar contains "://" %}
+  {% assign avatar_src = author.avatar %}
+{% else %}
+  {% capture avatar_src %}{{ author.avatar | prepend: "/images/" | prepend: base_path }}?v={{ site.time | date: '%s' }}{% endcapture %}
+{% endif %}
+
 <div itemscope itemtype="http://schema.org/Person">
 
   <div class="author__avatar">
-    {% if author.avatar contains "://" %}
-    	<img src="{{ author.avatar }}" alt="{{ author.name }}">
-    {% else %}
-      <img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}?v={{ site.time | date: '%s' }}" class="author__avatar" alt="{{ author.name }}">
-    {% endif %}
+    <button
+      class="author__avatar-zoom"
+      type="button"
+      data-profile-src="{{ avatar_src | escape }}"
+      data-profile-alt="{{ author.name | escape }}"
+      aria-haspopup="dialog"
+      aria-controls="profile-photo-lightbox"
+      aria-label="{% if page.lang == 'zh-CN' %}放大 {{ author.name | escape }} 的个人照片{% else %}Enlarge profile photo of {{ author.name | escape }}{% endif %}">
+      <img src="{{ avatar_src | escape }}" class="author__avatar-image" alt="{{ author.name | escape }}">
+      <span class="author__avatar-zoom-hint" aria-hidden="true">
+        <i class="fas fa-search-plus"></i>
+      </span>
+    </button>
   </div>
 
   <div class="author__content">
@@ -156,3 +170,101 @@
     </ul>
   </div>
 </div>
+
+<dialog
+  id="profile-photo-lightbox"
+  class="profile-lightbox"
+  aria-label="{% if page.lang == 'zh-CN' %}放大的个人照片{% else %}Enlarged profile photo{% endif %}">
+  <div class="profile-lightbox__toolbar">
+    <button
+      class="profile-lightbox__zoom-toggle"
+      type="button"
+      data-zoom-in-label="{% if page.lang == 'zh-CN' %}放大至两倍{% else %}Zoom to 200 percent{% endif %}"
+      data-zoom-out-label="{% if page.lang == 'zh-CN' %}恢复原始大小{% else %}Reset image size{% endif %}"
+      aria-label="{% if page.lang == 'zh-CN' %}放大至两倍{% else %}Zoom to 200 percent{% endif %}">
+      <i class="fas fa-search-plus" aria-hidden="true"></i>
+      <span>2×</span>
+    </button>
+    <button
+      class="profile-lightbox__close"
+      type="button"
+      aria-label="{% if page.lang == 'zh-CN' %}关闭个人照片大图{% else %}Close enlarged profile photo{% endif %}">&times;</button>
+  </div>
+  <div
+    class="profile-lightbox__viewport"
+    role="region"
+    aria-label="{% if page.lang == 'zh-CN' %}照片查看区域；放大后可滚动查看局部{% else %}Photo viewing area; scroll to inspect details while zoomed{% endif %}">
+    <button
+      class="profile-lightbox__image-toggle"
+      type="button"
+      aria-label="{% if page.lang == 'zh-CN' %}放大至两倍{% else %}Zoom to 200 percent{% endif %}">
+      <img class="profile-lightbox__image" alt="">
+    </button>
+  </div>
+</dialog>
+
+<script>
+  (function () {
+    var dialog = document.getElementById('profile-photo-lightbox');
+    var trigger = document.querySelector('.author__avatar-zoom');
+    if (!dialog || !trigger || typeof dialog.showModal !== 'function') return;
+
+    var enlargedImage = dialog.querySelector('.profile-lightbox__image');
+    var imageToggle = dialog.querySelector('.profile-lightbox__image-toggle');
+    var zoomToggle = dialog.querySelector('.profile-lightbox__zoom-toggle');
+    var zoomIcon = zoomToggle.querySelector('i');
+    var zoomText = zoomToggle.querySelector('span');
+    var viewport = dialog.querySelector('.profile-lightbox__viewport');
+    var closeButton = dialog.querySelector('.profile-lightbox__close');
+
+    function setZoom(isZoomed) {
+      var label = zoomToggle.getAttribute(isZoomed ? 'data-zoom-out-label' : 'data-zoom-in-label');
+      dialog.classList.toggle('is-zoomed', isZoomed);
+      zoomToggle.setAttribute('aria-label', label);
+      imageToggle.setAttribute('aria-label', label);
+      zoomIcon.classList.toggle('fa-search-plus', !isZoomed);
+      zoomIcon.classList.toggle('fa-search-minus', isZoomed);
+      zoomText.textContent = isZoomed ? '1×' : '2×';
+
+      window.requestAnimationFrame(function () {
+        if (isZoomed) {
+          viewport.scrollLeft = (viewport.scrollWidth - viewport.clientWidth) / 2;
+          viewport.scrollTop = (viewport.scrollHeight - viewport.clientHeight) / 2;
+        } else {
+          viewport.scrollLeft = 0;
+          viewport.scrollTop = 0;
+        }
+      });
+    }
+
+    function toggleZoom() {
+      setZoom(!dialog.classList.contains('is-zoomed'));
+    }
+
+    trigger.addEventListener('click', function () {
+      enlargedImage.src = trigger.getAttribute('data-profile-src');
+      enlargedImage.alt = trigger.getAttribute('data-profile-alt');
+      setZoom(false);
+      document.documentElement.classList.add('profile-lightbox-open');
+      dialog.showModal();
+      closeButton.focus();
+    });
+
+    zoomToggle.addEventListener('click', toggleZoom);
+    imageToggle.addEventListener('click', toggleZoom);
+
+    closeButton.addEventListener('click', function () {
+      dialog.close();
+    });
+
+    dialog.addEventListener('click', function (event) {
+      if (event.target === dialog) dialog.close();
+    });
+
+    dialog.addEventListener('close', function () {
+      setZoom(false);
+      document.documentElement.classList.remove('profile-lightbox-open');
+      trigger.focus();
+    });
+  }());
+</script>

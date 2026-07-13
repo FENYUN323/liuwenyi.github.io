@@ -79,7 +79,7 @@
 .author__avatar {
   display: table-cell;
   vertical-align: top;
-  width: 36px;
+  width: 56px;
   // set width only, for non-square avatars
   // height: 36px;
 
@@ -90,9 +90,9 @@
   }
 
   img {
-    width: 36px;
+    width: 56px;
     height: auto;
-    max-width: 175px;
+    max-width: none;
     border-radius: 0;
 
     @include breakpoint($large) {
@@ -101,7 +101,184 @@
       padding: 5px;
       border: 1px solid $border-color;
     }
+
+    @include breakpoint($x-large) {
+      width: 190px;
+    }
   }
+}
+
+.author__avatar-zoom {
+  position: relative;
+  display: block;
+  width: 56px;
+  min-height: 44px;
+  padding: 0;
+  overflow: hidden;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  cursor: zoom-in;
+
+  @include breakpoint($large) {
+    width: 175px;
+  }
+
+  @include breakpoint($x-large) {
+    width: 190px;
+  }
+
+  &:focus-visible {
+    outline: 3px solid $warning-color;
+    outline-offset: 3px;
+  }
+
+  &:hover .author__avatar-image {
+    box-shadow: 0 5px 16px rgba(#000, 0.18);
+  }
+}
+
+.author__avatar-image {
+  display: block;
+  transition: box-shadow 0.2s ease;
+}
+
+.author__avatar-zoom-hint {
+  position: absolute;
+  right: 0.35em;
+  bottom: 0.35em;
+  display: flex;
+  width: 1.8em;
+  height: 1.8em;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: rgba(#000, 0.7);
+  border: 1px solid rgba(#fff, 0.45);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(#000, 0.2);
+  font-size: 0.75em;
+  pointer-events: none;
+}
+
+.profile-lightbox {
+  width: 96vw;
+  height: 92vh;
+  max-width: 1500px;
+  max-height: 1000px;
+  padding: 0;
+  overflow: hidden;
+  color: #fff;
+  background: #111;
+  border: 1px solid rgba(#fff, 0.22);
+  border-radius: 8px;
+  box-shadow: 0 18px 60px rgba(#000, 0.55);
+
+  &[open] {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &::backdrop {
+    background: rgba(#000, 0.86);
+  }
+}
+
+.profile-lightbox__toolbar {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.55em;
+  padding: 0.6em 0.7em;
+  background: rgba(#000, 0.92);
+  border-bottom: 1px solid rgba(#fff, 0.18);
+}
+
+.profile-lightbox__zoom-toggle,
+.profile-lightbox__close {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4em;
+  padding: 0.35em 0.75em;
+  color: #fff;
+  background: rgba(#fff, 0.1);
+  border: 1px solid rgba(#fff, 0.42);
+  border-radius: 999px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    background: rgba(#fff, 0.2);
+  }
+
+  &:focus-visible {
+    outline: 3px solid $warning-color;
+    outline-offset: 2px;
+  }
+}
+
+.profile-lightbox__close {
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  padding: 0;
+  font-size: 1.2em;
+  line-height: 1;
+}
+
+.profile-lightbox__viewport {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  background: #181818;
+}
+
+.profile-lightbox__image-toggle {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  cursor: zoom-in;
+
+  &:focus-visible {
+    outline: 3px solid $warning-color;
+    outline-offset: -3px;
+  }
+}
+
+.sidebar .profile-lightbox__image {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.profile-lightbox.is-zoomed {
+  .profile-lightbox__image-toggle {
+    width: 200%;
+    height: 200%;
+    min-height: 200%;
+    align-items: center;
+    cursor: zoom-out;
+  }
+}
+
+html.profile-lightbox-open,
+html.profile-lightbox-open body {
+  overflow: hidden;
 }
 
 .author__content {
