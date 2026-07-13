@@ -23,13 +23,9 @@ Before joining HKU, I received my B.Eng. in Communication Engineering from [Harb
 
 [View all publications]({{ site.baseurl }}/publications/)
 
-## Honors and Awards
+## Selected Honors and Awards
 
-- Best Contribution Award in the Workshop on Field Robotics, First Prize, 2026
-- The Arthur and Louise May Memorial Fund Scholarship, First Prize, 2025
-- ICRA RoboMaster AI Challenge, Champion, 2021 and 2022
-- RoboMaster University Sim2Real Challenge, Champion, 2022
-- Unmanned Aerial Vehicle Intelligent Perception Technology Competition, Second Prize, 2022
+{% include selected-awards.html %}
 
 ## Teaching
 

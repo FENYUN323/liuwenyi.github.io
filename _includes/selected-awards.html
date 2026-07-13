@@ -1,0 +1,39 @@
+<div class="selected-awards">
+  {% for award in site.data.selected_awards %}
+    <article class="selected-award">
+      <div class="selected-award__media">
+        {% if award.image %}
+          <a
+            class="selected-award__image-link"
+            href="{{ award.image | relative_url }}"
+            aria-label="View certificate: {{ award.title }}">
+            <img
+              src="{{ award.image | relative_url }}"
+              alt="{{ award.image_alt }}"
+              loading="lazy"
+              decoding="async">
+          </a>
+        {% else %}
+          <div class="selected-award__placeholder" aria-hidden="true">
+            <svg viewBox="0 0 64 64" focusable="false">
+              <rect x="10" y="9" width="44" height="34" rx="3"></rect>
+              <path d="M19 19h26M19 26h18M19 33h12"></path>
+              <circle cx="43" cy="42" r="8"></circle>
+              <path d="m38 48-3 9 8-4 8 4-3-9"></path>
+            </svg>
+            <span>Certificate photo</span>
+          </div>
+        {% endif %}
+        <span class="selected-award__year">{{ award.year }}</span>
+      </div>
+
+      <div class="selected-award__body">
+        <h3 class="selected-award__title">{{ award.title }}</h3>
+        <p class="selected-award__distinction">{{ award.distinction }}</p>
+        {% if award.organization %}
+          <p class="selected-award__organization">{{ award.organization }}</p>
+        {% endif %}
+      </div>
+    </article>
+  {% endfor %}
+</div>
