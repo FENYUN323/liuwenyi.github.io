@@ -1,0 +1,91 @@
+{% assign competition_language = include.lang | default: "en" %}
+
+<section class="competition-highlights" aria-labelledby="competition-highlights-title">
+  <h2 id="competition-highlights-title">
+    {% if competition_language == "zh" %}RoboMaster 竞赛精彩回顾{% else %}RoboMaster Competition Highlights{% endif %}
+  </h2>
+  <p class="competition-highlights__intro">
+    {% if competition_language == "zh" %}
+      本科期间，我随 Critical HIT 机器人队参加 ICRA RoboMaster AI 挑战赛。以下决赛视频记录了我们在 2021 年夺得全球冠军，并于 2022 年成功卫冕的经历。
+    {% else %}
+      During my undergraduate studies, I competed with the Critical HIT robotics team in the ICRA RoboMaster AI Challenge. These final-match videos capture our 2021 world championship and successful title defense in 2022.
+    {% endif %}
+  </p>
+
+  <div class="competition-video-grid">
+    {% for competition in site.data.competition_videos %}
+      {% assign competition_title = competition.title %}
+      {% assign competition_role = competition.role %}
+      {% assign competition_result = competition.result %}
+      {% assign competition_description = competition.description %}
+      {% assign competition_video_label = competition.video_label %}
+      {% if competition_language == "zh" %}
+        {% assign competition_title = competition.title_zh | default: competition.title %}
+        {% assign competition_role = competition.role_zh | default: competition.role %}
+        {% assign competition_result = competition.result_zh | default: competition.result %}
+        {% assign competition_description = competition.description_zh | default: competition.description %}
+        {% assign competition_video_label = competition.video_label_zh | default: competition.video_label %}
+      {% endif %}
+
+      {% assign bilibili_url = competition.bilibili_url | default: "" | strip %}
+      {% assign bvid = "" %}
+      {% assign bilibili_page = "1" %}
+      {% if bilibili_url contains "/video/BV" %}
+        {% assign bvid = bilibili_url | split: "/video/" | last | split: "/" | first | split: "?" | first | split: "#" | first %}
+        {% if bilibili_url contains "?p=" %}
+          {% assign bilibili_page = bilibili_url | split: "?p=" | last | split: "&" | first | split: "#" | first %}
+        {% elsif bilibili_url contains "&p=" %}
+          {% assign bilibili_page = bilibili_url | split: "&p=" | last | split: "&" | first | split: "#" | first %}
+        {% endif %}
+      {% endif %}
+
+      <article class="competition-video-card">
+        <div class="competition-video-card__body">
+          <h3 class="competition-video-card__title">{{ competition_title }}</h3>
+          <div class="competition-video-card__meta" role="group" aria-label="{% if competition_language == 'zh' %}角色与比赛成绩{% else %}Role and competition result{% endif %}">
+            <span class="competition-video-card__role">{{ competition_role }}</span>
+            <span class="competition-video-card__result"><i class="fas fa-trophy" aria-hidden="true"></i> {{ competition_result }}</span>
+          </div>
+          <p class="competition-video-card__description">{{ competition_description }}</p>
+        </div>
+
+        <h4 class="competition-video-card__video-title">{{ competition_video_label }}</h4>
+        {% if bvid != "" %}
+          <div class="competition-video__embed">
+            <iframe
+              src="https://player.bilibili.com/player.html?bvid={{ bvid | escape }}&amp;p={{ bilibili_page | escape }}&amp;autoplay=0&amp;danmaku=0"
+              title="{{ competition_title | escape }} — {{ competition_video_label | escape }}"
+              loading="lazy"
+              frameborder="0"
+              scrolling="no"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        {% else %}
+          <div class="competition-video__placeholder">
+            <span class="competition-video__play" aria-hidden="true"><i class="fas fa-play"></i></span>
+            {% if bilibili_url == "" %}
+              <span>{% if competition_language == "zh" %}B站决赛视频待添加{% else %}Bilibili final video coming soon{% endif %}</span>
+            {% else %}
+              <span>{% if competition_language == "zh" %}请使用完整的 B站 BV 视频链接{% else %}Please use a full Bilibili BV video URL{% endif %}</span>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        <div class="competition-video__links">
+          {% if bilibili_url != "" %}
+            <a href="{{ bilibili_url | escape }}" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-play-circle" aria-hidden="true"></i>
+              {% if competition_language == "zh" %}在哔哩哔哩观看{% else %}Watch on Bilibili{% endif %}
+            </a>
+          {% else %}
+            <span class="is-disabled" aria-disabled="true">
+              <i class="fas fa-play-circle" aria-hidden="true"></i>
+              {% if competition_language == "zh" %}B站链接待添加{% else %}Bilibili link coming soon{% endif %}
+            </span>
+          {% endif %}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>

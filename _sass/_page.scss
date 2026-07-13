@@ -522,6 +522,187 @@
 
 
 /*
+   RoboMaster competition highlights
+   ========================================================================== */
+
+.competition-highlights {
+  margin: 2.35em 0 2.65em;
+}
+
+.page__content .competition-highlights__intro {
+  max-width: 50em;
+  margin: -0.2em 0 1.15em;
+  color: mix(#fff, $text-color, 14%);
+  line-height: 1.65;
+  text-indent: 0;
+}
+
+.competition-video-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.1em;
+
+  @include breakpoint($x-large) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.competition-video-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: $body-color;
+  border: 1px solid $border-color;
+  border-radius: 11px;
+  box-shadow: 0 4px 16px rgba(#000, 0.09);
+}
+
+.competition-video-card__body {
+  flex: 1 1 auto;
+  padding: 1em 1em 0.75em;
+}
+
+.page__content .competition-video-card__title {
+  margin: 0 0 0.6em;
+  padding: 0;
+  border: 0;
+  font-size: 1.02em;
+  line-height: 1.35;
+}
+
+.competition-video-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45em;
+  margin-bottom: 0.65em;
+}
+
+.competition-video-card__role,
+.competition-video-card__result {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  padding: 0.22em 0.65em;
+  border-radius: 999px;
+  font-size: 0.76em;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.competition-video-card__role {
+  color: mix(#000, $info-color, 35%);
+  background: rgba($info-color, 0.12);
+}
+
+.competition-video-card__result {
+  color: mix(#000, $warning-color, 43%);
+  background: rgba($warning-color, 0.16);
+}
+
+.page__content .competition-video-card__description {
+  margin: 0;
+  color: mix(#fff, $text-color, 10%);
+  font-size: 0.9em;
+  line-height: 1.55;
+  text-indent: 0;
+}
+
+.page__content .competition-video-card__video-title {
+  margin: 0;
+  padding: 0.1em 1em 0.7em;
+  font-size: 0.88em;
+  line-height: 1.35;
+}
+
+.competition-video__embed,
+.competition-video__placeholder {
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #111;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+}
+
+.competition-video__embed iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.competition-video__placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7em;
+  padding: 1em;
+  color: rgba(#fff, 0.82);
+  background:
+    radial-gradient(circle at 16% 18%, rgba(#00aeec, 0.32), transparent 42%),
+    radial-gradient(circle at 85% 80%, rgba(#fb7299, 0.28), transparent 42%),
+    linear-gradient(135deg, #151a22, #252b36);
+  text-align: center;
+
+  > span:last-child {
+    font-size: 0.86em;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+}
+
+.competition-video__play {
+  display: inline-flex;
+  width: 3.25em;
+  height: 3.25em;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: linear-gradient(135deg, #00aeec, #fb7299);
+  border-radius: 50%;
+  box-shadow: 0 5px 16px rgba(#000, 0.25);
+
+  i {
+    margin-left: 0.12em;
+  }
+}
+
+.competition-video__links {
+  display: flex;
+  padding: 0.8em 1em 0.95em;
+
+  a,
+  span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    padding: 0.36em 0.75em;
+    border: 1px solid rgba($link-color, 0.42);
+    border-radius: 999px;
+    font-size: 0.82em;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus-visible {
+    color: #fff;
+    background: $link-color;
+  }
+
+  .is-disabled {
+    color: mix(#fff, $text-color, 38%);
+    background: mix(#fff, $background-color, 86%);
+    border-color: $border-color;
+    cursor: not-allowed;
+  }
+}
+
+
+/*
    Selected honors and awards
    ========================================================================== */
 

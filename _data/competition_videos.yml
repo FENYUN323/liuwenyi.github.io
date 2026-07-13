@@ -1,0 +1,28 @@
+# Add the full public Bilibili video URL for each final below.
+# Use https://www.bilibili.com/video/BV... rather than a b23.tv short link.
+# For a multipart video, keep its ?p=2 (or &p=2) parameter in the URL.
+- year: "2021"
+  title: "2021 ICRA RoboMaster AI Challenge"
+  title_zh: "2021 ICRA RoboMaster AI 挑战赛"
+  role: "Vice Captain"
+  role_zh: "副队长"
+  result: "World Champion"
+  result_zh: "全球冠军"
+  description: "As vice captain of Critical HIT, I helped the team win the 2021 ICRA RoboMaster AI Challenge World Championship."
+  description_zh: "2021 年，我担任 Critical HIT 机器人队副队长，协助团队夺得 ICRA RoboMaster AI Challenge 全球冠军。"
+  video_label: "2021 Final Match"
+  video_label_zh: "2021 年决赛视频"
+  bilibili_url: "" # Paste the full Bilibili video URL here.
+
+- year: "2022"
+  title: "2022 ICRA RoboMaster AI Challenge"
+  title_zh: "2022 ICRA RoboMaster AI 挑战赛"
+  role: "Team Captain"
+  role_zh: "队长"
+  result: "World Champion"
+  result_zh: "全球冠军"
+  description: "As captain of Critical HIT, I led the team to successfully defend its ICRA RoboMaster AI Challenge world championship title in 2022."
+  description_zh: "2022 年，我担任 Critical HIT 机器人队队长，带领团队成功卫冕 ICRA RoboMaster AI Challenge 全球冠军。"
+  video_label: "2022 Final Match"
+  video_label_zh: "2022 年决赛视频"
+  bilibili_url: "" # Paste the full Bilibili video URL here.

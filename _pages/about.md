@@ -27,6 +27,8 @@ During my undergraduate studies, I served as **vice captain** of the Critical HI
 
 [View all publications]({{ site.baseurl }}/publications/)
 
+{% include competition-videos.html %}
+
 ## Selected Awards
 
 {% include selected-awards.html %}

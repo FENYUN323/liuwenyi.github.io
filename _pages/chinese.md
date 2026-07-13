@@ -17,7 +17,7 @@ lang: zh-CN
 
 本科期间，2021 年我担任 Critical HIT 机器人队**副队长**，协助团队夺得 **ICRA RoboMaster AI Challenge 全球冠军**。2022 年，我担任**队长**，带领团队成功卫冕全球冠军。
 
-[Google Scholar](https://scholar.google.com/citations?user=vtPuO3kAAAAJ) · [GitHub](https://github.com/FENYUN323) · [哔哩哔哩](https://space.bilibili.com/1679529247?spm_id_from=333.337.0.0) · [LinkedIn](https://www.linkedin.com/in/wenyi-liu-0062032a5/) · [下载简历]({{ site.baseurl }}/files/CV_Wenyi_Liu.pdf)
+[谷歌学术](https://scholar.google.com/citations?user=vtPuO3kAAAAJ) · [GitHub](https://github.com/FENYUN323) · [哔哩哔哩](https://space.bilibili.com/1679529247?spm_id_from=333.337.0.0) · [领英](https://www.linkedin.com/in/wenyi-liu-0062032a5/) · [下载简历]({{ site.baseurl }}/files/CV_Wenyi_Liu.pdf)
 
 ## 精选论文
 
@@ -26,6 +26,8 @@ lang: zh-CN
 \* 共同第一作者。
 
 [查看全部论文]({{ site.baseurl }}/publications/)
+
+{% include competition-videos.html lang="zh" %}
 
 ## 精选奖项
 
