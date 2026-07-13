@@ -143,24 +143,6 @@
   transition: box-shadow 0.2s ease;
 }
 
-.author__avatar-zoom-hint {
-  position: absolute;
-  right: 0.35em;
-  bottom: 0.35em;
-  display: flex;
-  width: 1.8em;
-  height: 1.8em;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  background: rgba(#000, 0.7);
-  border: 1px solid rgba(#fff, 0.45);
-  border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(#000, 0.2);
-  font-size: 0.75em;
-  pointer-events: none;
-}
-
 .profile-lightbox__image-close {
   display: block;
   padding: 0;

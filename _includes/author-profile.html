@@ -22,9 +22,6 @@
       aria-controls="profile-photo-lightbox"
       aria-label="{% if page.lang == 'zh-CN' %}放大 {{ author.name | escape }} 的个人照片{% else %}Enlarge profile photo of {{ author.name | escape }}{% endif %}">
       <img src="{{ avatar_src | escape }}" class="author__avatar-image" alt="{{ author.name | escape }}">
-      <span class="author__avatar-zoom-hint" aria-hidden="true">
-        <i class="fas fa-search-plus"></i>
-      </span>
     </button>
   </div>
 
