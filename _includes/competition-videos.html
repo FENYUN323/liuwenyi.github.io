@@ -2,13 +2,13 @@
 
 <section class="competition-highlights" aria-labelledby="competition-highlights-title">
   <h2 id="competition-highlights-title">
-    {% if competition_language == "zh" %}RoboMaster 竞赛精彩回顾{% else %}RoboMaster Competition Highlights{% endif %}
+    {% if competition_language == "zh" %}竞赛精彩回顾{% else %}Competition Highlights{% endif %}
   </h2>
   <p class="competition-highlights__intro">
     {% if competition_language == "zh" %}
-      本科期间，我随 Critical HIT 机器人队参加 ICRA RoboMaster AI 挑战赛。以下决赛视频记录了我们在 2021 年夺得全球冠军，并于 2022 年成功卫冕的经历。
+      我的竞赛经历涵盖机器人队管理与无人机赛事指导。以下视频记录了我们在 2021 年夺得 ICRA RoboMaster AI Challenge 全球冠军、2022 年成功卫冕，以及我作为指导老师参与的无人飞行器智能感知技术竞赛。
     {% else %}
-      During my undergraduate studies, I competed with the Critical HIT robotics team in the ICRA RoboMaster AI Challenge. These final-match videos capture our 2021 world championship and successful title defense in 2022.
+      My competition experience spans robotics team leadership and mentorship. These videos highlight our ICRA RoboMaster AI Challenge world championships in 2021 and 2022, together with an unmanned aerial vehicle competition that I supported as a mentor.
     {% endif %}
   </p>
 
@@ -44,7 +44,9 @@
           <h3 class="competition-video-card__title">{{ competition_title }}</h3>
           <div class="competition-video-card__meta" role="group" aria-label="{% if competition_language == 'zh' %}角色与比赛成绩{% else %}Role and competition result{% endif %}">
             <span class="competition-video-card__role">{{ competition_role }}</span>
-            <span class="competition-video-card__result"><i class="fas fa-trophy" aria-hidden="true"></i> {{ competition_result }}</span>
+            {% if competition_result != "" %}
+              <span class="competition-video-card__result"><i class="fas fa-trophy" aria-hidden="true"></i> {{ competition_result }}</span>
+            {% endif %}
           </div>
           <p class="competition-video-card__description">{{ competition_description }}</p>
         </div>

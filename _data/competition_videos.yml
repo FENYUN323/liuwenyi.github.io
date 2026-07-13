@@ -26,3 +26,16 @@
   video_label: "2022 Final Match"
   video_label_zh: "2022 年决赛视频"
   bilibili_url: "https://www.bilibili.com/video/BV1DB4y1X7Yi/" # Paste the full Bilibili video URL here.
+
+- year: "2022"
+  title: "2022 Unmanned Aerial Vehicle Intelligent Perception Technology Competition"
+  title_zh: "2022 无人飞行器智能感知技术竞赛"
+  role: "Mentor"
+  role_zh: "指导老师"
+  result: "Second Prize in Two Events"
+  result_zh: "两个赛项二等奖"
+  description: "As a mentor to the Critical HIT team, I supported its participation in the 2022 Unmanned Aerial Vehicle Intelligent Perception Technology Competition in Shanghai. The team received Second Prize in both the Offline Autonomous Flight and Precision Positioning events."
+  description_zh: "作为 Critical HIT 机器人队指导老师，我参与指导团队参加在上海举行的 2022 无人飞行器智能感知技术竞赛。团队在线下自主飞行和精准定位两个赛项中均获二等奖。"
+  video_label: "2022 Competition Recap"
+  video_label_zh: "2022 年比赛回顾"
+  bilibili_url: "https://www.bilibili.com/video/BV1mM411c7oA/"
