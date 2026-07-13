@@ -58,7 +58,7 @@
       var source = new URL(frame.src);
       var configuredOrigin = source.searchParams.get("origin") || "";
 
-      if (configuredOrigin.toLowerCase() !== window.location.origin.toLowerCase()) {
+      if (configuredOrigin !== window.location.origin) {
         source.searchParams.set("origin", window.location.origin);
         frame.src = source.toString();
       }

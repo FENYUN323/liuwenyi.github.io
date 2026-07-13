@@ -55,7 +55,7 @@
       <iframe
         class="js-research-youtube"
         data-youtube-id="{{ youtube_id | escape }}"
-        src="https://www.youtube-nocookie.com/embed/{{ youtube_id | escape }}?enablejsapi=1&amp;playsinline=1&amp;rel=0&amp;origin={{ site.url | escape }}"
+        src="https://www.youtube-nocookie.com/embed/{{ youtube_id | escape }}?enablejsapi=1&amp;playsinline=1&amp;rel=0&amp;origin={{ site.url | downcase | escape }}"
         title="YouTube video for {{ project.title | escape }}"
         loading="lazy"
         referrerpolicy="strict-origin-when-cross-origin"
