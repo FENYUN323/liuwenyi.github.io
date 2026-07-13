@@ -1,21 +1,15 @@
 <div class="selected-awards">
   {% for award in site.data.selected_awards %}
-    {% assign certificate_url = award.document | default: award.image %}
     <article class="selected-award">
       <div class="selected-award__media">
         {% if award.image %}
-          <a
-            class="selected-award__image-link"
-            href="{{ certificate_url | relative_url }}"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="View certificate: {{ award.title }} (opens in a new tab)">
+          <div class="selected-award__image">
             <img
               src="{{ award.image | relative_url }}"
               alt="{{ award.image_alt }}"
               loading="lazy"
               decoding="async">
-          </a>
+          </div>
         {% else %}
           <div class="selected-award__placeholder" aria-hidden="true">
             <svg viewBox="0 0 64 64" focusable="false">
@@ -33,22 +27,14 @@
       <div class="selected-award__body">
         <h3 class="selected-award__title">{{ award.title }}</h3>
         <p class="selected-award__distinction">{{ award.distinction }}</p>
+        {% if award.result %}
+          <p class="selected-award__result">{{ award.result }}</p>
+        {% endif %}
         {% if award.detail %}
           <p class="selected-award__detail">{{ award.detail }}</p>
         {% endif %}
         {% if award.organization %}
           <p class="selected-award__organization">{{ award.organization }}</p>
-        {% endif %}
-        {% if certificate_url %}
-          <p class="selected-award__links">
-            <a
-              href="{{ certificate_url | relative_url }}"
-              target="_blank"
-              rel="noopener noreferrer">
-              View certificate{% if award.document %} (PDF){% endif %}
-              <span aria-hidden="true">↗</span>
-            </a>
-          </p>
         {% endif %}
       </div>
     </article>

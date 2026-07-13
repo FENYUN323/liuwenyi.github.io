@@ -561,12 +561,10 @@
   border-bottom: 1px solid $border-color;
 }
 
-.selected-award__image-link {
-  display: block;
+.selected-award__image {
   width: 100%;
   height: 100%;
   padding: 0.5em;
-  text-decoration: none !important;
 
   img {
     display: block;
@@ -646,6 +644,19 @@
   text-indent: 0;
 }
 
+.page__content .selected-award__result {
+  display: inline-block;
+  margin: 0 0 0.4em 0.35em;
+  padding: 0.18em 0.55em;
+  color: #fff;
+  background: mix(#000, $warning-color, 20%);
+  border-radius: 999px;
+  font-size: 0.78em;
+  font-weight: 700;
+  line-height: 1.35;
+  text-indent: 0;
+}
+
 .page__content .selected-award__organization {
   margin: 0;
   color: mix(#fff, $text-color, 26%);
@@ -661,23 +672,6 @@
   font-weight: 600;
   line-height: 1.4;
   text-indent: 0;
-}
-
-.page__content .selected-award__links {
-  margin: 0.65em 0 0;
-  font-size: 0.8em;
-  font-weight: 600;
-  line-height: 1.35;
-  text-indent: 0;
-
-  a {
-    text-decoration: none;
-
-    &:hover,
-    &:focus-visible {
-      text-decoration: underline;
-    }
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
