@@ -1,7 +1,9 @@
+{% assign publication_language = include.lang | default: "en" %}
+
 <div class="selected-pubs">
   {% for publication in site.data.selected_publications %}
     <article class="selected-pub">
-      <a class="selected-pub__media" href="{{ publication.paper }}" aria-label="View paper: {{ publication.title }}">
+      <a class="selected-pub__media" href="{{ publication.paper }}" aria-label="{% if publication_language == 'zh' %}查看论文：{% else %}View paper: {% endif %}{{ publication.title }}">
         <video
           class="selected-pub__video"
           muted
@@ -21,10 +23,23 @@
           <a href="{{ publication.paper }}">{{ publication.title }}</a>
         </h3>
         <p class="selected-pub__authors">{{ publication.authors }}</p>
-        <p class="selected-pub__venue"><em>{{ publication.venue }}</em>, {{ publication.year }}</p>
+        <p class="selected-pub__venue"><em>{{ publication.venue }}</em>, {% if publication_language == "zh" and publication.year == "under review" %}审稿中{% else %}{{ publication.year }}{% endif %}</p>
         <p class="selected-pub__links">
           {% for link in publication.links %}
-            <a href="{{ link.url }}">{{ link.label }}</a>{% unless forloop.last %}<span aria-hidden="true"> · </span>{% endunless %}
+            {% assign link_label = link.label %}
+            {% if publication_language == "zh" %}
+              {% case link.label %}
+                {% when "Paper" %}
+                  {% assign link_label = "论文" %}
+                {% when "Code" %}
+                  {% assign link_label = "代码" %}
+                {% when "Video" %}
+                  {% assign link_label = "视频" %}
+                {% when "Project Page" %}
+                  {% assign link_label = "项目主页" %}
+              {% endcase %}
+            {% endif %}
+            <a href="{{ link.url }}">{{ link_label }}</a>{% unless forloop.last %}<span aria-hidden="true"> · </span>{% endunless %}
           {% endfor %}
         </p>
       </div>

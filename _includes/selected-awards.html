@@ -1,7 +1,22 @@
 {% assign awards = include.awards | default: site.data.selected_awards %}
+{% assign award_language = include.lang | default: "en" %}
 
 <div class="selected-awards">
   {% for award in awards %}
+    {% assign award_title = award.title %}
+    {% assign award_organization = award.organization %}
+    {% assign award_distinction = award.distinction %}
+    {% assign award_result = award.result %}
+    {% assign award_detail = award.detail %}
+    {% assign award_image_alt = award.image_alt %}
+    {% if award_language == "zh" %}
+      {% assign award_title = award.title_zh | default: award.title %}
+      {% assign award_organization = award.organization_zh | default: award.organization %}
+      {% assign award_distinction = award.distinction_zh | default: award.distinction %}
+      {% assign award_result = award.result_zh | default: award.result %}
+      {% assign award_detail = award.detail_zh | default: award.detail %}
+      {% assign award_image_alt = award.image_alt_zh | default: award.image_alt %}
+    {% endif %}
     <article class="selected-award">
       <div class="selected-award__media">
         {% if award.image %}
@@ -10,13 +25,13 @@
               class="selected-award__zoom"
               type="button"
               data-award-src="{{ award.image | relative_url }}"
-              data-award-alt="{{ award.image_alt | escape }}"
+              data-award-alt="{{ award_image_alt | escape }}"
               aria-haspopup="dialog"
               aria-controls="award-lightbox"
-              aria-label="Enlarge certificate: {{ award.title | escape }}">
+              aria-label="{% if award_language == 'zh' %}放大证书：{% else %}Enlarge certificate: {% endif %}{{ award_title | escape }}">
               <img
                 src="{{ award.image | relative_url }}"
-                alt="{{ award.image_alt }}"
+                alt="{{ award_image_alt }}"
                 loading="lazy"
                 decoding="async">
               <span class="selected-award__zoom-hint" aria-hidden="true">
@@ -35,33 +50,33 @@
               <circle cx="43" cy="42" r="8"></circle>
               <path d="m38 48-3 9 8-4 8 4-3-9"></path>
             </svg>
-            <span>Certificate photo</span>
+            <span>{% if award_language == "zh" %}证书照片{% else %}Certificate photo{% endif %}</span>
           </div>
         {% endif %}
         <span class="selected-award__year">{{ award.year }}</span>
       </div>
 
       <div class="selected-award__body">
-        <h3 class="selected-award__title">{{ award.title }}</h3>
-        {% if award.distinction %}
-          <p class="selected-award__distinction">{{ award.distinction }}</p>
+        <h3 class="selected-award__title">{{ award_title }}</h3>
+        {% if award_distinction %}
+          <p class="selected-award__distinction">{{ award_distinction }}</p>
         {% endif %}
-        {% if award.result %}
-          <p class="selected-award__result">{{ award.result }}</p>
+        {% if award_result %}
+          <p class="selected-award__result">{{ award_result }}</p>
         {% endif %}
-        {% if award.detail %}
-          <p class="selected-award__detail">{{ award.detail }}</p>
+        {% if award_detail %}
+          <p class="selected-award__detail">{{ award_detail }}</p>
         {% endif %}
-        {% if award.organization %}
-          <p class="selected-award__organization">{{ award.organization }}</p>
+        {% if award_organization %}
+          <p class="selected-award__organization">{{ award_organization }}</p>
         {% endif %}
       </div>
     </article>
   {% endfor %}
 </div>
 
-<dialog id="award-lightbox" class="award-lightbox" aria-label="Enlarged award certificate">
-  <button class="award-lightbox__close" type="button" aria-label="Close enlarged certificate">&times;</button>
+<dialog id="award-lightbox" class="award-lightbox" aria-label="{% if award_language == 'zh' %}放大的奖项证书{% else %}Enlarged award certificate{% endif %}">
+  <button class="award-lightbox__close" type="button" aria-label="{% if award_language == 'zh' %}关闭证书大图{% else %}Close enlarged certificate{% endif %}">&times;</button>
   <img class="award-lightbox__image" alt="">
 </dialog>
 

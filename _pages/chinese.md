@@ -1,40 +1,45 @@
 ---
-layout: archive
-title: "中文"
+layout: single
+title: "关于我"
 permalink: /chinese/
 author_profile: true
+author: wenyi_zh
+lang: zh-CN
 ---
 
-我是 **Wenyi Liu**，现为[香港大学](https://www.hku.hk/)机器人学博士研究生，于 2023 年 3 月加入 [MaRS 实验室](https://mars.hku.hk/)，师从[张富教授](https://www.mech.hku.hk/academic-staff/zhang-f)。
+我是 **Wenyi Liu**，现为[香港大学（HKU）](https://www.hku.hk/)机器人学博士研究生。我于 2023 年 3 月加入 [MaRS 实验室](https://mars.hku.hk/)，师从[张富教授](https://www.mech.hku.hk/academic-staff/zhang-f)。
 
-我的研究方向包括**机器人导航、规划与控制、集群机器人、无人机、空中操作、具身智能以及基于激光雷达的环境感知**。我尤其关注无人机在复杂、动态和不确定环境中的自主运行，希望构建更加可靠、灵活的空中机器人系统。
+我的研究聚焦于**机器人导航、规划与控制、集群机器人、无人机（UAV）、空中操作、具身智能以及基于激光雷达的感知**。我尤其关注如何构建能够在复杂、动态和不确定环境中可靠运行的自主空中机器人系统。
 
-在加入香港大学之前，我于 2022 年在[哈尔滨工业大学（深圳）](https://www.hitsz.edu.cn/)获得通信工程学士学位。本科毕业论文研究无人机高速移动起降的轨迹规划，并获得优秀毕业论文奖。
+以第一作者或共同第一作者身份，我已发表 **4 篇期刊论文**，其中 1 篇发表于 <span class="journal-highlight"><em>Nature Communications</em></span>，2 篇发表于 <span class="journal-highlight"><em>IEEE Transactions on Field Robotics</em></span>，1 篇发表于 <span class="journal-highlight"><em>IEEE Robotics and Automation Letters</em></span>。此外，我还以共同作者身份发表了 **4 篇期刊论文**，其中 2 篇发表于 <span class="journal-highlight"><em>IEEE Transactions on Robotics</em></span>，1 篇发表于 <span class="journal-highlight"><em>The International Journal of Robotics Research</em></span>，1 篇发表于 <span class="journal-highlight"><em>Advanced Intelligent Systems</em></span>。
 
-[Google Scholar](https://scholar.google.com/citations?user=vtPuO3kAAAAJ) · [GitHub](https://github.com/FENYUN323) · [下载简历]({{ site.baseurl }}/files/CV_Wenyi_Liu.pdf)
+在加入香港大学之前，我于 2022 年获得[哈尔滨工业大学（深圳）](https://www.hitsz.edu.cn/)通信工程专业工学学士学位。我的本科毕业论文研究无人机高速移动起降的轨迹规划，并获评<span class="about-award-highlight">优秀毕业论文奖</span>。
 
-## 研究方向
+本科期间，2021 年我担任 Critical HIT 机器人队**副队长**，协助团队夺得 **ICRA RoboMaster AI Challenge 全球冠军**。2022 年，我担任**队长**，带领团队成功卫冕全球冠军。
 
-- 面向复杂环境的无人机规划与控制
-- 基于激光雷达的自主巡检与机器人感知
-- 不确定扰动下的安全飞行与避障
-- 接触驱动的高密度环境飞行
-- 无人机集群与快速部署系统
+[Google Scholar](https://scholar.google.com/citations?user=vtPuO3kAAAAJ) · [GitHub](https://github.com/FENYUN323) · [哔哩哔哩](https://space.bilibili.com/1679529247?spm_id_from=333.337.0.0) · [LinkedIn](https://www.linkedin.com/in/wenyi-liu-0062032a5/) · [下载简历]({{ site.baseurl }}/files/CV_Wenyi_Liu.pdf)
 
-## 代表性成果
+## 精选论文
 
-- **Wenyi Liu**，Y. Ren，R. Guo 等，“Slope inspection under dense vegetation using LiDAR-based quadrotors”，*Nature Communications*，2025。[论文](https://www.nature.com/articles/s41467-025-62801-y) · [代码](https://github.com/hku-mars/slope_inspection) · [视频](https://www.bilibili.com/video/BV1P7e3zgEaa)
-- **Wenyi Liu**\*，H. Wu\*，L. Shi 等，“LiDAR-Based Quadrotor Autonomous Inspection System in Cluttered Environments”，*IEEE Transactions on Field Robotics*，2025。[论文](https://ieeexplore.ieee.org/document/11145926) · [视频](https://www.bilibili.com/video/BV1rUawzgE9c)
-- **Wenyi Liu**\*，Y. Ren\*，F. Zhang，“Integrated planning and control for quadrotor navigation in presence of suddenly appearing objects and disturbances”，*IEEE Robotics and Automation Letters*，2023。[论文](https://ieeexplore.ieee.org/abstract/document/10238764) · [代码](https://github.com/hku-mars/IPC) · [视频](https://www.bilibili.com/video/BV1NM4y117TH)
-- **Wenyi Liu**\*，L. Shi\*，Y. Geng 等，“DIRECT: A digital reflex for UAV navigation in clutter under uncertain disturbances”，审稿中。[视频](https://youtu.be/A1KgZRGSbpo)
-- L. Shi\*，**Wenyi Liu**\*，X. Han 等，“Traversing the Untraversable: Enabling UAV Navigation in the Extremely Dense Wild by Contact-driven Adaptation”，*IEEE Transactions on Field Robotics*，2026。[论文](https://ieeexplore.ieee.org/document/11573071) · [视频](https://youtu.be/C_Iw6WcDexE)
-- H. Wu\*，**Wenyi Liu**\*，Y. Ren 等，“Flying through cluttered and dynamic environments with LiDAR”，*Advanced Intelligent Systems*，审稿中。[论文](https://arxiv.org/abs/2504.17569)
+{% include selected-publications.html lang="zh" %}
 
 \* 共同第一作者。
 
 [查看全部论文]({{ site.baseurl }}/publications/)
 
+## 精选奖项
+
+{% include selected-awards.html lang="zh" %}
+
+[查看全部奖项]({{ site.baseurl }}/awards/)
+
 ## 教学经历
 
-- 香港大学 MECH3433 Robotics, Drones and Autonomous Ground Vehicles，助教，2025
-- 香港大学 MECH3418 Dynamics and Control，助教，2023–2024
+- 香港大学 **MECH3433 Robotics, Drones and Autonomous Ground Vehicles** 课程助教，2025
+- 香港大学 **MECH3418 Dynamics and Control** 课程助教，2023–2024
+
+## 技能与兴趣
+
+- **研究方向：**机器人导航、规划与控制、无人机系统、集群机器人、具身智能、激光雷达感知
+- **技术技能：**Linux、C++、Python、ROS、嵌入式软硬件、机械设计与控制算法设计
+- **兴趣爱好：**乒乓球、足球、机器人与电子技术

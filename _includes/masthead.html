@@ -8,12 +8,29 @@
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}/">{{ site.title }}</a></li>
           {% for link in site.data.navigation.main %}
-            {% if link.url contains 'http' %}
+            {% assign link_title = link.title %}
+            {% assign link_url = link.url %}
+            {% if page.lang == "zh-CN" %}
+              {% case link.title %}
+                {% when "Publications" %}
+                  {% assign link_title = "论文" %}
+                {% when "Awards" %}
+                  {% assign link_title = "奖项" %}
+                {% when "Research" %}
+                  {% assign link_title = "研究" %}
+                {% when "CV" %}
+                  {% assign link_title = "简历" %}
+                {% when "中文" %}
+                  {% assign link_title = "English" %}
+                  {% assign link_url = "/" %}
+              {% endcase %}
+            {% endif %}
+            {% if link_url contains 'http' %}
               {% assign domain = '' %}
               {% else %}
               {% assign domain = base_path %}
             {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+            <li class="masthead__menu-item"><a href="{{ domain }}{{ link_url }}">{{ link_title }}</a></li>
           {% endfor %}
         </ul>
         <ul class="hidden-links hidden"></ul>
