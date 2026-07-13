@@ -721,11 +721,15 @@
 }
 
 .page__content .selected-award__detail {
-  margin: 0 0 0.35em;
-  color: mix(#fff, $text-color, 16%);
-  font-size: 0.84em;
-  font-weight: 600;
-  line-height: 1.4;
+  display: inline-block;
+  margin: 0 0 0.4em 0.35em;
+  padding: 0.18em 0.55em;
+  color: mix(#000, $info-color, 35%);
+  background: rgba($info-color, 0.12);
+  border-radius: 999px;
+  font-size: 0.78em;
+  font-weight: 700;
+  line-height: 1.35;
   text-indent: 0;
 }
 
