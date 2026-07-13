@@ -1,3 +1,5 @@
+# Homepage order follows this file from top to bottom. Move a complete award block to reorder it.
+
 - title: "Best Contribution Award"
   organization: "ICRA 2026 Workshop on Field Robotics"
   distinction: "1st Place"
@@ -39,3 +41,11 @@
   year: "2022"
   image: "/images/awards/2022无人机自主飞行.jpg"
   image_alt: "2022 Unmanned Aerial Vehicle Intelligent Perception Technology Competition Second Prize certificate"
+
+- title: "Outstanding Student Scholarship"
+  organization: "Harbin Institute of Technology, Shenzhen"
+  distinction: "First-Class Scholarship"
+  year: "2018–2019"
+  image: "/images/awards/hit-scholarship-2018-2019-first-prize.jpg"
+  document: "/images/awards/2018-2019一等奖学金.pdf"
+  image_alt: "2018–2019 Outstanding Student First-Class Scholarship certificate from Harbin Institute of Technology, Shenzhen"

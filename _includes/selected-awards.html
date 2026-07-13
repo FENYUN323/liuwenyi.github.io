@@ -4,11 +4,26 @@
       <div class="selected-award__media">
         {% if award.image %}
           <div class="selected-award__image">
-            <img
-              src="{{ award.image | relative_url }}"
-              alt="{{ award.image_alt }}"
-              loading="lazy"
-              decoding="async">
+            <button
+              class="selected-award__zoom"
+              type="button"
+              data-award-src="{{ award.image | relative_url }}"
+              data-award-alt="{{ award.image_alt | escape }}"
+              aria-haspopup="dialog"
+              aria-controls="award-lightbox"
+              aria-label="Enlarge certificate: {{ award.title | escape }}">
+              <img
+                src="{{ award.image | relative_url }}"
+                alt="{{ award.image_alt }}"
+                loading="lazy"
+                decoding="async">
+              <span class="selected-award__zoom-hint" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <circle cx="10.5" cy="10.5" r="5.5"></circle>
+                  <path d="m15 15 5 5M10.5 8v5M8 10.5h5"></path>
+                </svg>
+              </span>
+            </button>
           </div>
         {% else %}
           <div class="selected-award__placeholder" aria-hidden="true">
@@ -40,3 +55,44 @@
     </article>
   {% endfor %}
 </div>
+
+<dialog id="award-lightbox" class="award-lightbox" aria-label="Enlarged award certificate">
+  <button class="award-lightbox__close" type="button" aria-label="Close enlarged certificate">&times;</button>
+  <img class="award-lightbox__image" alt="">
+</dialog>
+
+<script>
+  (function () {
+    var dialog = document.getElementById('award-lightbox');
+    if (!dialog || typeof dialog.showModal !== 'function') return;
+
+    var enlargedImage = dialog.querySelector('.award-lightbox__image');
+    var closeButton = dialog.querySelector('.award-lightbox__close');
+    var zoomButtons = document.querySelectorAll('.selected-award__zoom');
+    var lastTrigger = null;
+
+    zoomButtons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        lastTrigger = button;
+        enlargedImage.src = button.getAttribute('data-award-src');
+        enlargedImage.alt = button.getAttribute('data-award-alt');
+        document.documentElement.classList.add('award-lightbox-open');
+        dialog.showModal();
+        closeButton.focus();
+      });
+    });
+
+    closeButton.addEventListener('click', function () {
+      dialog.close();
+    });
+
+    dialog.addEventListener('click', function (event) {
+      if (event.target === dialog) dialog.close();
+    });
+
+    dialog.addEventListener('close', function () {
+      document.documentElement.classList.remove('award-lightbox-open');
+      if (lastTrigger) lastTrigger.focus();
+    });
+  }());
+</script>
