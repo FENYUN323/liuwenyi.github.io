@@ -26,6 +26,11 @@ author_profile: true
 - **Wenyi Liu**，Y. Ren，R. Guo 等，“Slope inspection under dense vegetation using LiDAR-based quadrotors”，*Nature Communications*，2025。[论文](https://www.nature.com/articles/s41467-025-62801-y) · [代码](https://github.com/hku-mars/slope_inspection) · [视频](https://www.bilibili.com/video/BV1P7e3zgEaa)
 - **Wenyi Liu**\*，H. Wu\*，L. Shi 等，“LiDAR-Based Quadrotor Autonomous Inspection System in Cluttered Environments”，*IEEE Transactions on Field Robotics*，2025。[论文](https://ieeexplore.ieee.org/document/11145926) · [视频](https://www.bilibili.com/video/BV1rUawzgE9c)
 - **Wenyi Liu**\*，Y. Ren\*，F. Zhang，“Integrated planning and control for quadrotor navigation in presence of suddenly appearing objects and disturbances”，*IEEE Robotics and Automation Letters*，2023。[论文](https://ieeexplore.ieee.org/abstract/document/10238764) · [代码](https://github.com/hku-mars/IPC) · [视频](https://www.bilibili.com/video/BV1NM4y117TH)
+- **Wenyi Liu**\*，L. Shi\*，Y. Geng 等，“DIRECT: A digital reflex for UAV navigation in clutter under uncertain disturbances”，审稿中。[视频](https://youtu.be/A1KgZRGSbpo)
+- L. Shi\*，**Wenyi Liu**\*，X. Han 等，“Traversing the Untraversable: Enabling UAV Navigation in the Extremely Dense Wild by Contact-driven Adaptation”，*IEEE Transactions on Field Robotics*，2026。[论文](https://ieeexplore.ieee.org/document/11573071) · [视频](https://youtu.be/C_Iw6WcDexE)
+- H. Wu\*，**Wenyi Liu**\*，Y. Ren 等，“Flying through cluttered and dynamic environments with LiDAR”，*Advanced Intelligent Systems*，审稿中。[论文](https://arxiv.org/abs/2504.17569)
+
+\* 共同第一作者。
 
 [查看全部论文]({{ site.baseurl }}/publications/)
 
@@ -33,5 +38,3 @@ author_profile: true
 
 - 香港大学 MECH3433 Robotics, Drones and Autonomous Ground Vehicles，助教，2025
 - 香港大学 MECH3418 Dynamics and Control，助教，2023–2024
-
-\* 共同第一作者。
