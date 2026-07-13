@@ -1,0 +1,62 @@
+<div class="selected-pubs">
+  {% for publication in site.data.selected_publications %}
+    <article class="selected-pub">
+      <a class="selected-pub__media" href="{{ publication.paper }}" aria-label="View paper: {{ publication.title }}">
+        <video
+          class="selected-pub__video"
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="{{ publication.poster | relative_url }}"
+          aria-hidden="true">
+          <source src="{{ publication.video | relative_url }}" type="video/mp4">
+          <img src="{{ publication.poster | relative_url }}" alt="">
+        </video>
+        <span class="visually-hidden">{{ publication.media_alt }}</span>
+      </a>
+
+      <div class="selected-pub__body">
+        <h3 class="selected-pub__title">
+          <a href="{{ publication.paper }}">{{ publication.title }}</a>
+        </h3>
+        <p class="selected-pub__authors">{{ publication.authors }}</p>
+        <p class="selected-pub__venue"><em>{{ publication.venue }}</em>, {{ publication.year }}</p>
+        <p class="selected-pub__links">
+          {% for link in publication.links %}
+            <a href="{{ link.url }}">{{ link.label }}</a>{% unless forloop.last %}<span aria-hidden="true"> · </span>{% endunless %}
+          {% endfor %}
+        </p>
+      </div>
+    </article>
+  {% endfor %}
+</div>
+
+<script>
+  (function () {
+    var videos = document.querySelectorAll('.selected-pub__video');
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    if (reduceMotion.matches) return;
+
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var playPromise = entry.target.play();
+            if (playPromise) playPromise.catch(function () {});
+          } else {
+            entry.target.pause();
+          }
+        });
+      }, { threshold: 0.2 });
+
+      videos.forEach(function (video) { observer.observe(video); });
+    } else {
+      videos.forEach(function (video) {
+        var playPromise = video.play();
+        if (playPromise) playPromise.catch(function () {});
+      });
+    }
+  }());
+</script>
