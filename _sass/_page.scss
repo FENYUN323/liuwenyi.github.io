@@ -654,6 +654,32 @@
   text-indent: 0;
 }
 
+.page__content .selected-award__detail {
+  margin: 0 0 0.35em;
+  color: mix(#fff, $text-color, 16%);
+  font-size: 0.84em;
+  font-weight: 600;
+  line-height: 1.4;
+  text-indent: 0;
+}
+
+.page__content .selected-award__links {
+  margin: 0.65em 0 0;
+  font-size: 0.8em;
+  font-weight: 600;
+  line-height: 1.35;
+  text-indent: 0;
+
+  a {
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+    }
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .selected-award {
     transition: none;
