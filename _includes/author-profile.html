@@ -176,8 +176,10 @@
   class="award-lightbox profile-lightbox"
   aria-label="{% if page.lang == 'zh-CN' %}放大的个人照片{% else %}Enlarged profile photo{% endif %}">
   <button
-    class="award-lightbox__close profile-lightbox__close"
+    class="profile-lightbox__image-close"
     type="button"
-    aria-label="{% if page.lang == 'zh-CN' %}关闭个人照片大图{% else %}Close enlarged profile photo{% endif %}">&times;</button>
-  <img class="award-lightbox__image profile-lightbox__image" alt="">
+    hidden
+    aria-label="{% if page.lang == 'zh-CN' %}关闭个人照片大图{% else %}Close enlarged profile photo{% endif %}">
+    <img class="award-lightbox__image profile-lightbox__image" alt="">
+  </button>
 </dialog>

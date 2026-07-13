@@ -923,6 +923,10 @@
   }
 }
 
+.award-lightbox:not([open]) {
+  display: none;
+}
+
 .award-lightbox__image {
   display: block;
   width: auto;

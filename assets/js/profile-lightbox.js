@@ -5,19 +5,20 @@
   if (!dialog || !trigger || typeof dialog.showModal !== 'function') return;
 
   var enlargedImage = dialog.querySelector('.profile-lightbox__image');
-  var closeButton = dialog.querySelector('.profile-lightbox__close');
+  var imageCloseButton = dialog.querySelector('.profile-lightbox__image-close');
 
-  if (!enlargedImage || !closeButton) return;
+  if (!enlargedImage || !imageCloseButton) return;
 
   trigger.addEventListener('click', function () {
     enlargedImage.src = trigger.getAttribute('data-profile-src');
     enlargedImage.alt = trigger.getAttribute('data-profile-alt');
+    imageCloseButton.hidden = false;
     document.documentElement.classList.add('profile-lightbox-open');
     dialog.showModal();
-    closeButton.focus();
+    imageCloseButton.focus();
   });
 
-  closeButton.addEventListener('click', function () {
+  imageCloseButton.addEventListener('click', function () {
     dialog.close();
   });
 
@@ -27,7 +28,9 @@
 
   dialog.addEventListener('close', function () {
     document.documentElement.classList.remove('profile-lightbox-open');
+    imageCloseButton.hidden = true;
     enlargedImage.removeAttribute('src');
+    enlargedImage.alt = '';
     trigger.focus();
   });
 }());
