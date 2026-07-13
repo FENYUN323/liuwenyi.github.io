@@ -11,7 +11,7 @@ I am **Wenyi Liu**, a Ph.D. candidate in Robotics at the [University of Hong Kon
 
 My research focuses on **robot navigation, planning and control, swarm robotics, uncrewed aerial vehicles (UAVs), aerial manipulation, embodied AI, and LiDAR-based perception**. I am particularly interested in building autonomous aerial systems that can operate reliably in cluttered, dynamic, and uncertain environments.
 
-Before joining HKU, I received my B.Eng. in Communication Engineering from [Harbin Institute of Technology, Shenzhen](https://www.hitsz.edu.cn/) in 2022. My undergraduate thesis studied trajectory planning for high-speed mobile takeoff and landing of UAVs and received an Outstanding Thesis Award.
+Before joining HKU, I received my B.Eng. in Communication Engineering from [Harbin Institute of Technology, Shenzhen](https://www.hitsz.edu.cn/) in 2022. My undergraduate thesis studied trajectory planning for high-speed mobile takeoff and landing of UAVs and received an <span class="about-award-highlight">Outstanding Thesis Award</span>.
 
 [Google Scholar](https://scholar.google.com/citations?user=vtPuO3kAAAAJ) · [GitHub](https://github.com/FENYUN323) · [Download CV]({{ site.baseurl }}/files/CV_Wenyi_Liu.pdf)
 

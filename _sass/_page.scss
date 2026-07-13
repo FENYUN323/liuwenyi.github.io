@@ -525,6 +525,11 @@
    Selected honors and awards
    ========================================================================== */
 
+.about-award-highlight {
+  color: #d62828;
+  font-weight: 700;
+}
+
 .selected-awards {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
