@@ -6,7 +6,6 @@
   result: "Champion"
   year: "2021"
   image: "/images/awards/rmua-2021-grand-prize.jpg"
-  document: "/images/awards/RMUA2021国际赛冠军.pdf"
   image_alt: "2021 RoboMaster University AI Challenge Grand Prize certificate awarded to Wenyi Liu"
 
 - title: "ICRA RoboMaster AI Challenge"
@@ -15,7 +14,6 @@
   result: "Champion"
   year: "2022"
   image: "/images/awards/rmua-2022-grand-prize.jpg"
-  document: "/images/awards/RMUA2022冠军.pdf"
   image_alt: "2022 RoboMaster University AI Challenge Grand Prize certificate awarded to Wenyi Liu"
 
 - title: "Best Contribution Award"
@@ -30,7 +28,6 @@
   distinction: "First-Class Scholarship"
   year: "2018–2019"
   image: "/images/awards/hit-scholarship-2018-2019-first-prize.jpg"
-  document: "/images/awards/2018-2019一等奖学金.pdf"
   image_alt: "2018–2019 Outstanding Student First-Class Scholarship certificate from Harbin Institute of Technology, Shenzhen"
 
 - title: "RoboMaster University Sim2Real Challenge"
@@ -39,7 +36,6 @@
   detail: "Mentor"
   year: "2022"
   image: "/images/awards/rmus-2022-grand-prize.jpg"
-  document: "/images/awards/RMUS2022.pdf"
   image_alt: "2022 RoboMaster University Sim2Real Challenge Grand Prize certificate listing Wenyi Liu as a mentor"
 
 - title: "Unmanned Aerial Vehicle Intelligent Perception Technology Competition"

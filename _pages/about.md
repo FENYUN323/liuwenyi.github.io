@@ -25,7 +25,7 @@ Before joining HKU, I received my B.Eng. in Communication Engineering from [Harb
 
 [View all publications]({{ site.baseurl }}/publications/)
 
-## Selected Honors and Awards
+## Selected Awards
 
 {% include selected-awards.html %}
 
