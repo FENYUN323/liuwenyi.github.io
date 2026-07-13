@@ -31,6 +31,8 @@ During my undergraduate studies, I served as **vice captain** of the Critical HI
 
 {% include selected-awards.html %}
 
+[View all awards]({{ site.baseurl }}/awards/)
+
 ## Teaching
 
 - Teaching Assistant, **MECH3433 Robotics, Drones and Autonomous Ground Vehicles**, HKU, 2025
