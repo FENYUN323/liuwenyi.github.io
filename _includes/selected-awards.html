@@ -1,5 +1,7 @@
+{% assign awards = include.awards | default: site.data.selected_awards %}
+
 <div class="selected-awards">
-  {% for award in site.data.selected_awards %}
+  {% for award in awards %}
     <article class="selected-award">
       <div class="selected-award__media">
         {% if award.image %}
@@ -41,7 +43,9 @@
 
       <div class="selected-award__body">
         <h3 class="selected-award__title">{{ award.title }}</h3>
-        <p class="selected-award__distinction">{{ award.distinction }}</p>
+        {% if award.distinction %}
+          <p class="selected-award__distinction">{{ award.distinction }}</p>
+        {% endif %}
         {% if award.result %}
           <p class="selected-award__result">{{ award.result }}</p>
         {% endif %}
