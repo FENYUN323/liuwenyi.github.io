@@ -7,9 +7,9 @@ author_profile: true
 
 {% include base_path %}
 
-My research focuses on reliable aerial autonomy in cluttered, dynamic, and uncertain environments. The projects below cover planning and control, LiDAR-based inspection, contact-aware navigation, and swarm deployment.
+My research focuses on reliable aerial autonomy in cluttered, dynamic, and uncertain environments. Each project below includes verified publication information, a research summary, an online video area, and links to the corresponding paper and code where available.
 
-
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
+{% assign research_projects = site.portfolio | sort: "order" %}
+{% for post in research_projects %}
+  {% include research-project.html project=post show_title=true %}
 {% endfor %}

@@ -1,0 +1,87 @@
+{% assign project = include.project %}
+{% assign youtube_url = project.youtube_url | default: "" | strip %}
+{% assign bilibili_url = project.bilibili_url | default: "" | strip %}
+{% assign paper_url = project.paper_url | default: "" | strip %}
+{% assign code_url = project.code_url | default: "" | strip %}
+{% assign youtube_id = "" %}
+
+{% if youtube_url contains "youtu.be/" %}
+  {% assign youtube_id = youtube_url | split: "youtu.be/" | last | split: "?" | first | split: "#" | first %}
+{% elsif youtube_url contains "watch?v=" %}
+  {% assign youtube_id = youtube_url | split: "watch?v=" | last | split: "&" | first | split: "#" | first %}
+{% elsif youtube_url contains "/embed/" %}
+  {% assign youtube_id = youtube_url | split: "/embed/" | last | split: "?" | first | split: "#" | first %}
+{% elsif youtube_url contains "/shorts/" %}
+  {% assign youtube_id = youtube_url | split: "/shorts/" | last | split: "?" | first | split: "#" | first %}
+{% elsif youtube_url contains "/live/" %}
+  {% assign youtube_id = youtube_url | split: "/live/" | last | split: "?" | first | split: "#" | first %}
+{% endif %}
+
+<section class="research-project">
+  {% if include.show_title %}
+    <h2 class="research-project__title">
+      <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+    </h2>
+  {% endif %}
+
+  {% if project.publication_date %}
+    <p class="research-project__meta">
+      <i class="fa fa-fw fa-calendar" aria-hidden="true"></i>
+      <strong>Published:</strong>
+      <time datetime="{{ project.publication_date_iso }}">{{ project.publication_date }}</time>
+    </p>
+  {% endif %}
+
+  {% if project.publication %}
+    <p class="research-project__publication"><strong>Publication:</strong> {{ project.publication }}</p>
+  {% endif %}
+
+  {% if include.show_title %}
+    <h3 class="research-project__section-title">Abstract</h3>
+  {% else %}
+    <h2 class="research-project__section-title">Abstract</h2>
+  {% endif %}
+  <div class="research-project__abstract">
+    {{ project.paper_abstract | markdownify }}
+  </div>
+
+  {% if include.show_title %}
+    <h3 class="research-project__section-title">Video</h3>
+  {% else %}
+    <h2 class="research-project__section-title">Video</h2>
+  {% endif %}
+  {% if youtube_id != "" %}
+    <div class="research-video__embed">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/{{ youtube_id }}"
+        title="YouTube video for {{ project.title | escape }}"
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+  {% else %}
+    <div class="research-video__placeholder" role="img" aria-label="YouTube video coming soon">
+      <i class="fab fa-youtube" aria-hidden="true"></i>
+      <span>YouTube video coming soon</span>
+    </div>
+  {% endif %}
+
+  <div class="research-video__links" aria-label="Video links">
+    {% if youtube_url != "" %}
+      <a href="{{ youtube_url }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube" aria-hidden="true"></i> YouTube</a>
+    {% else %}
+      <span class="is-disabled" aria-disabled="true"><i class="fab fa-youtube" aria-hidden="true"></i> YouTube</span>
+    {% endif %}
+    {% if bilibili_url != "" %}
+      <a href="{{ bilibili_url }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-bilibili" aria-hidden="true"></i> Bilibili</a>
+    {% else %}
+      <span class="is-disabled" aria-disabled="true"><i class="fab fa-bilibili" aria-hidden="true"></i> Bilibili</span>
+    {% endif %}
+  </div>
+
+  <div class="research-project__resources" aria-label="Project resources">
+    {% if paper_url != "" %}<a href="{{ paper_url }}">Paper</a>{% endif %}
+    {% if code_url != "" %}<a href="{{ code_url }}">Code</a>{% endif %}
+  </div>
+</section>
