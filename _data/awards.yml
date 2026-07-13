@@ -1,5 +1,5 @@
 # Awards page order follows this file from top to bottom. Move a complete award block to reorder it.
-# Leave out the image field until a certificate photo is available; the page will show a placeholder.
+# Only awards with certificate images are listed on this page.
 
 - title: "Best Contribution Award"
   organization: "ICRA 2026 Workshop on Field Robotics"
@@ -7,15 +7,6 @@
   year: "2026"
   image: "/images/awards/workshop on field robotics.jpg"
   image_alt: "Best Contribution Award trophy from the ICRA 2026 Workshop on Field Robotics"
-
-- title: "The Arthur and Louise May Memorial Fund Scholarship"
-  organization: "The University of Hong Kong"
-  distinction: "First Prize"
-  year: "2025"
-
-- title: "Outstanding Thesis Award"
-  organization: "Harbin Institute of Technology, Shenzhen"
-  year: "2022"
 
 - title: "Unmanned Aerial Vehicle Intelligent Perception Technology Competition"
   organization: "Critical HIT · Harbin Institute of Technology, Shenzhen"
@@ -39,6 +30,14 @@
   year: "2022"
   image: "/images/awards/2022无人机技术报告.jpg"
   image_alt: "2022 UAV Intelligent Perception Technology Competition Outstanding Technical Report Award certificate"
+
+- title: "13th Challenge Cup Entrepreneurship Competition for Guangdong College Students"
+  organization: "Guangdong Province · Harbin Institute of Technology, Shenzhen"
+  distinction: "Silver Award"
+  detail: "Pioneer of Future Agriculture: An Unmanned Transport Vehicle for Hilly and Mountainous Terrain"
+  year: "2022"
+  image: "/images/awards/challenge-cup-guangdong-2022-silver.jpg"
+  image_alt: "2022 13th Challenge Cup Guangdong College Student Entrepreneurship Competition Silver Award certificate listing Wenyi Liu"
 
 - title: "ICRA RoboMaster AI Challenge"
   organization: "Critical HIT · Harbin Institute of Technology, Shenzhen"
@@ -73,21 +72,21 @@
   image: "/images/awards/ICRA2021中国赛二等奖.jpg"
   image_alt: "2021 RoboMaster University AI Challenge China Division Second Prize certificate awarded to Wenyi Liu"
 
-- title: "Outstanding Student Scholarship"
-  organization: "Harbin Institute of Technology, Shenzhen"
-  detail: "2020–2021 Academic Year"
+- title: "7th Heilongjiang “Internet+” College Student Innovation and Entrepreneurship Competition"
+  organization: "China Construction Bank Cup · Heilongjiang Province"
+  distinction: "Bronze Award"
+  detail: "Agricultural IoT Solution Centered on Fully Autonomous Robots"
   year: "2021"
+  image: "/images/awards/internet-plus-heilongjiang-2021-bronze.jpg"
+  image_alt: "2021 Heilongjiang Internet Plus College Student Innovation and Entrepreneurship Competition Bronze Award certificate listing Wenyi Liu"
 
-- title: "RoboMaster University Championship"
-  organization: "Harbin Institute of Technology, Shenzhen"
+- title: "RoboMaster 2020 University Championship"
+  organization: "Team Nan Gong Xiao Ying · Harbin Institute of Technology, Shenzhen"
   distinction: "Second Prize"
+  detail: "19th National College Student Robotics Competition · Online Competition"
   year: "2020"
-
-- title: "Guangdong Provincial Electronic Design Contest"
-  organization: "Guangdong Province, China"
-  distinction: "Third Prize"
-  detail: "5G+AI Theme"
-  year: "2020"
+  image: "/images/awards/robomaster-2020-online-second-prize.jpg"
+  image_alt: "RoboMaster 2020 University Championship Online Competition Second Prize certificate awarded to Wenyi Liu"
 
 - title: "Outstanding Student Scholarship"
   organization: "Harbin Institute of Technology, Shenzhen"
