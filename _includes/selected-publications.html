@@ -2,6 +2,10 @@
 
 <div class="selected-pubs">
   {% for publication in site.data.selected_publications %}
+    {% assign publication_authors = publication.authors %}
+    {% if publication_language == "zh" %}
+      {% assign publication_authors = publication_authors | replace: "Wenyi Liu", "刘文熠" %}
+    {% endif %}
     <article class="selected-pub">
       <a class="selected-pub__media" href="{{ publication.paper }}" aria-label="{% if publication_language == 'zh' %}查看论文：{% else %}View paper: {% endif %}{{ publication.title }}">
         <video
@@ -22,7 +26,7 @@
         <h3 class="selected-pub__title">
           <a href="{{ publication.paper }}">{{ publication.title }}</a>
         </h3>
-        <p class="selected-pub__authors">{{ publication.authors }}</p>
+        <p class="selected-pub__authors">{{ publication_authors }}</p>
         <p class="selected-pub__venue"><em>{{ publication.venue }}</em>, {% if publication_language == "zh" and publication.year == "under review" %}审稿中{% else %}{{ publication.year }}{% endif %}</p>
         <p class="selected-pub__links">
           {% for link in publication.links %}

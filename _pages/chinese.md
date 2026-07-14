@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "关于我"
+site_title: "刘文熠"
 permalink: /chinese/
 author_profile: true
 author: wenyi_zh
