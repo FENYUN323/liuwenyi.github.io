@@ -4,14 +4,20 @@
 {% assign paper_url = project.paper_url | default: "" | strip %}
 {% assign code_url = project.code_url | default: "" | strip %}
 {% assign youtube_id = "" %}
+{% assign bvid = "" %}
+{% assign bilibili_page = "1" %}
 {% assign abstract_slug = project.url | default: project.title | slugify %}
 {% assign abstract_id = abstract_slug | prepend: "research-abstract-" %}
 {% assign abstract_more_label = "Show more" %}
 {% assign abstract_less_label = "Show less" %}
+{% assign video_source_label = "Video source:" %}
+{% assign video_switch_hint = "If YouTube is blocked, switch to Bilibili." %}
 
 {% if page.lang == "zh-CN" or include.lang == "zh" %}
   {% assign abstract_more_label = "显示更多" %}
   {% assign abstract_less_label = "收起" %}
+  {% assign video_source_label = "播放源：" %}
+  {% assign video_switch_hint = "如果 YouTube 无法播放，请切换到 Bilibili。" %}
 {% endif %}
 
 {% if youtube_url contains "youtu.be/" %}
@@ -24,6 +30,15 @@
   {% assign youtube_id = youtube_url | split: "/shorts/" | last | split: "?" | first | split: "#" | first %}
 {% elsif youtube_url contains "/live/" %}
   {% assign youtube_id = youtube_url | split: "/live/" | last | split: "?" | first | split: "#" | first %}
+{% endif %}
+
+{% if bilibili_url contains "/video/BV" %}
+  {% assign bvid = bilibili_url | split: "/video/" | last | split: "/" | first | split: "?" | first | split: "#" | first %}
+  {% if bilibili_url contains "?p=" %}
+    {% assign bilibili_page = bilibili_url | split: "?p=" | last | split: "&" | first | split: "#" | first %}
+  {% elsif bilibili_url contains "&p=" %}
+    {% assign bilibili_page = bilibili_url | split: "&p=" | last | split: "&" | first | split: "#" | first %}
+  {% endif %}
 {% endif %}
 
 <section class="research-project">
@@ -77,22 +92,66 @@
   {% else %}
     <h2 class="research-project__section-title">Video</h2>
   {% endif %}
-  {% if youtube_id != "" %}
-    <div class="research-video__embed">
-      <iframe
-        src="https://www.youtube-nocookie.com/embed/{{ youtube_id | escape }}?playsinline=1&amp;rel=0"
-        title="YouTube video for {{ project.title | escape }}"
-        loading="lazy"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
-    </div>
-  {% else %}
-    <div class="research-video__placeholder" role="img" aria-label="YouTube video coming soon">
-      <i class="fab fa-youtube" aria-hidden="true"></i>
-      <span>YouTube video coming soon</span>
-    </div>
-  {% endif %}
+  <div class="research-video" data-research-video>
+    {% if youtube_id != "" and bvid != "" %}
+      <div
+        class="research-video__source-switcher"
+        data-research-video-switcher
+        role="group"
+        aria-label="Video source"
+        hidden>
+        <span class="research-video__source-label">{{ video_source_label }}</span>
+        <button
+          type="button"
+          data-video-source="youtube"
+          data-video-src="https://www.youtube-nocookie.com/embed/{{ youtube_id | escape }}?playsinline=1&amp;rel=0"
+          data-video-title="YouTube video for {{ project.title | escape }}"
+          aria-pressed="true">
+          <i class="fab fa-youtube" aria-hidden="true"></i> YouTube
+        </button>
+        <button
+          type="button"
+          data-video-source="bilibili"
+          data-video-src="https://player.bilibili.com/player.html?bvid={{ bvid | escape }}&amp;p={{ bilibili_page | escape }}&amp;autoplay=0&amp;danmaku=0"
+          data-video-title="Bilibili video for {{ project.title | escape }}"
+          aria-pressed="false">
+          <i class="fab fa-bilibili" aria-hidden="true"></i> Bilibili
+        </button>
+      </div>
+      <p class="research-video__source-hint" data-research-video-hint hidden>{{ video_switch_hint }}</p>
+    {% endif %}
+
+    {% if youtube_id != "" %}
+      <div class="research-video__embed">
+        <iframe
+          data-research-video-frame
+          data-video-source="youtube"
+          src="https://www.youtube-nocookie.com/embed/{{ youtube_id | escape }}?playsinline=1&amp;rel=0"
+          title="YouTube video for {{ project.title | escape }}"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+          allowfullscreen></iframe>
+      </div>
+    {% elsif bvid != "" %}
+      <div class="research-video__embed">
+        <iframe
+          data-research-video-frame
+          data-video-source="bilibili"
+          src="https://player.bilibili.com/player.html?bvid={{ bvid | escape }}&amp;p={{ bilibili_page | escape }}&amp;autoplay=0&amp;danmaku=0"
+          title="Bilibili video for {{ project.title | escape }}"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    {% else %}
+      <div class="research-video__placeholder" role="img" aria-label="Video coming soon">
+        <i class="fas fa-play-circle" aria-hidden="true"></i>
+        <span>Video coming soon</span>
+      </div>
+    {% endif %}
+  </div>
 
   <div class="research-project__actions" role="group" aria-label="Research links">
     {% if youtube_url != "" %}

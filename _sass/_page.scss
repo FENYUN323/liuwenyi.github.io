@@ -1038,6 +1038,66 @@ html.award-lightbox-open body {
   }
 }
 
+.research-video__source-switcher {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-bottom: 0.55em;
+
+  &[hidden] {
+    display: none;
+  }
+
+  button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    padding: 0.3em 0.7em;
+    color: $link-color;
+    background: transparent;
+    border: 1px solid rgba($link-color, 0.42);
+    border-radius: 999px;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.82em;
+    font-weight: 600;
+    line-height: 1.2;
+
+    &:hover {
+      color: $link-color-hover;
+      border-color: $link-color-hover;
+    }
+
+    &[aria-pressed="true"] {
+      color: #fff;
+      background: $link-color;
+      border-color: $link-color;
+    }
+
+    &:focus-visible {
+      outline: 3px solid $warning-color;
+      outline-offset: 2px;
+    }
+  }
+}
+
+.research-video__source-label {
+  color: mix(#fff, $text-color, 16%);
+  font-size: 0.86em;
+  font-weight: 600;
+}
+
+.research-video__source-hint {
+  margin: 0 0 0.65em;
+  color: mix(#fff, $text-color, 24%);
+  font-size: 0.82em;
+
+  &[hidden] {
+    display: none;
+  }
+}
+
 .research-video__embed,
 .research-video__placeholder {
   width: 100%;
