@@ -4,6 +4,15 @@
 {% assign paper_url = project.paper_url | default: "" | strip %}
 {% assign code_url = project.code_url | default: "" | strip %}
 {% assign youtube_id = "" %}
+{% assign abstract_slug = project.url | default: project.title | slugify %}
+{% assign abstract_id = abstract_slug | prepend: "research-abstract-" %}
+{% assign abstract_more_label = "Show more" %}
+{% assign abstract_less_label = "Show less" %}
+
+{% if page.lang == "zh-CN" or include.lang == "zh" %}
+  {% assign abstract_more_label = "显示更多" %}
+  {% assign abstract_less_label = "收起" %}
+{% endif %}
 
 {% if youtube_url contains "youtu.be/" %}
   {% assign youtube_id = youtube_url | split: "youtu.be/" | last | split: "?" | first | split: "#" | first %}
@@ -41,8 +50,26 @@
   {% else %}
     <h2 class="research-project__section-title">Abstract</h2>
   {% endif %}
-  <div class="research-project__abstract">
-    {{ project.paper_abstract | markdownify }}
+  <div class="research-project__abstract"{% if include.show_title %} data-collapsible-abstract{% endif %}>
+    {% if include.show_title %}
+      <p class="research-project__abstract-preview" hidden>{{ project.paper_abstract | strip_html | truncatewords: 55 | escape }}</p>
+    {% endif %}
+    <div class="research-project__abstract-content"{% if include.show_title %} id="{{ abstract_id | escape }}"{% endif %}>
+      {{ project.paper_abstract | markdownify }}
+    </div>
+    {% if include.show_title %}
+      <button
+        class="research-project__abstract-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="{{ abstract_id | escape }}"
+        data-more-label="{{ abstract_more_label | escape }}"
+        data-less-label="{{ abstract_less_label | escape }}"
+        hidden>
+        <span data-abstract-toggle-label>{{ abstract_more_label }}</span>
+        <span class="visually-hidden">{% if page.lang == "zh-CN" or include.lang == "zh" %}“{{ project.title }}”摘要{% else %} abstract for {{ project.title }}{% endif %}</span>
+      </button>
+    {% endif %}
   </div>
 
   {% if include.show_title %}
