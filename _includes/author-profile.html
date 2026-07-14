@@ -42,7 +42,10 @@
         <li class="author__desktop"><i class="fa fa-solid fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.employer }}</li>
       {% endif %}
       {% if author.undergraduate %}
-        <li class="author__desktop"><i class="fas fa-fw fa-graduation-cap icon-pad-right" aria-hidden="true"></i>{{ author.undergraduate }}</li>
+        <li class="author__desktop author__education">
+          <i class="fas fa-fw fa-graduation-cap icon-pad-right" aria-hidden="true"></i>{{ author.undergraduate }}
+          {% if author.undergraduate_school %}<span class="author__education-school">{{ author.undergraduate_school }}</span>{% endif %}
+        </li>
       {% endif %}
       {% if author.uri %}
         <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{% if page.lang == "zh-CN" %}网站{% else %}{{ site.data.ui-text[site.locale].website_label | default: "Website" }}{% endif %}</a></li>
