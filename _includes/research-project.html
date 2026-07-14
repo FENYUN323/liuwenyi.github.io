@@ -6,18 +6,36 @@
 {% assign youtube_id = "" %}
 {% assign bvid = "" %}
 {% assign bilibili_page = "1" %}
+{% assign youtube_origin = site.url | default: "https://fenyun323.github.io" | downcase %}
 {% assign abstract_slug = project.url | default: project.title | slugify %}
 {% assign abstract_id = abstract_slug | prepend: "research-abstract-" %}
+{% assign youtube_frame_id = abstract_slug | prepend: "research-youtube-" %}
 {% assign abstract_more_label = "Show more" %}
 {% assign abstract_less_label = "Show less" %}
 {% assign video_source_label = "Video source:" %}
-{% assign video_switch_hint = "If YouTube is blocked, switch to Bilibili." %}
+{% assign video_switch_hint = "If YouTube does not start, this player switches to Bilibili automatically. Choosing a source manually pauses automatic switching." %}
+{% assign video_check_label = "Checking YouTube…" %}
+{% assign video_play_label = "Play video" %}
+{% assign video_trying_label = "Trying YouTube…" %}
+{% assign video_timeout_label = "YouTube did not start in time, so this video was switched to Bilibili. You can switch back above." %}
+{% assign video_error_label = "YouTube could not play this video, so it was switched to Bilibili. You can switch back above." %}
+{% assign video_manual_youtube_label = "Using YouTube. Automatic fallback is paused for this video." %}
+{% assign video_manual_error_label = "YouTube could not play this video. You can select Bilibili above." %}
+{% assign video_autoplay_blocked_label = "Your browser blocked playback. Press Play video to try again." %}
 
 {% if page.lang == "zh-CN" or include.lang == "zh" %}
   {% assign abstract_more_label = "显示更多" %}
   {% assign abstract_less_label = "收起" %}
   {% assign video_source_label = "播放源：" %}
-  {% assign video_switch_hint = "如果 YouTube 无法播放，请切换到 Bilibili。" %}
+  {% assign video_switch_hint = "如果 YouTube 未能开始播放，播放器会自动切换到 Bilibili；手动选择播放源后会暂停自动切换。" %}
+  {% assign video_check_label = "正在检查 YouTube…" %}
+  {% assign video_play_label = "播放视频" %}
+  {% assign video_trying_label = "正在尝试播放 YouTube…" %}
+  {% assign video_timeout_label = "YouTube 未能及时开始播放，已自动切换到 Bilibili；你仍可在上方切回 YouTube。" %}
+  {% assign video_error_label = "YouTube 无法播放该视频，已自动切换到 Bilibili；你仍可在上方切回 YouTube。" %}
+  {% assign video_manual_youtube_label = "正在使用 YouTube；本视频的自动切换已暂停。" %}
+  {% assign video_manual_error_label = "YouTube 无法播放该视频，你可以在上方选择 Bilibili。" %}
+  {% assign video_autoplay_blocked_label = "浏览器阻止了播放，请再次点击“播放视频”。" %}
 {% endif %}
 
 {% if youtube_url contains "youtu.be/" %}
@@ -92,19 +110,33 @@
   {% else %}
     <h2 class="research-project__section-title">Video</h2>
   {% endif %}
-  <div class="research-video" data-research-video>
+  <div
+    class="research-video"
+    data-research-video
+    data-youtube-ready-timeout="12000"
+    data-youtube-play-timeout="12000"
+    data-youtube-buffer-timeout="25000"
+    data-video-project-title="{{ project.title | escape }}"
+    data-video-check-label="{{ video_check_label | escape }}"
+    data-video-play-label="{{ video_play_label | escape }}"
+    data-video-trying-label="{{ video_trying_label | escape }}"
+    data-video-timeout-label="{{ video_timeout_label | escape }}"
+    data-video-error-label="{{ video_error_label | escape }}"
+    data-video-manual-youtube-label="{{ video_manual_youtube_label | escape }}"
+    data-video-manual-error-label="{{ video_manual_error_label | escape }}"
+    data-video-autoplay-blocked-label="{{ video_autoplay_blocked_label | escape }}">
     {% if youtube_id != "" and bvid != "" %}
       <div
         class="research-video__source-switcher"
         data-research-video-switcher
         role="group"
-        aria-label="Video source"
+        aria-label="Video source for {{ project.title | escape }}"
         hidden>
         <span class="research-video__source-label">{{ video_source_label }}</span>
         <button
           type="button"
           data-video-source="youtube"
-          data-video-src="https://www.youtube-nocookie.com/embed/{{ youtube_id | escape }}?playsinline=1&amp;rel=0"
+          data-video-src="https://www.youtube-nocookie.com/embed/{{ youtube_id | escape }}?enablejsapi=1&amp;playsinline=1&amp;rel=0&amp;origin={{ youtube_origin | url_encode }}"
           data-video-title="YouTube video for {{ project.title | escape }}"
           aria-pressed="true">
           <i class="fab fa-youtube" aria-hidden="true"></i> YouTube
@@ -124,14 +156,28 @@
     {% if youtube_id != "" %}
       <div class="research-video__embed">
         <iframe
+          id="{{ youtube_frame_id | escape }}"
           data-research-video-frame
           data-video-source="youtube"
-          src="https://www.youtube-nocookie.com/embed/{{ youtube_id | escape }}?playsinline=1&amp;rel=0"
+          src="https://www.youtube-nocookie.com/embed/{{ youtube_id | escape }}?enablejsapi=1&amp;playsinline=1&amp;rel=0&amp;origin={{ youtube_origin | url_encode }}"
           title="YouTube video for {{ project.title | escape }}"
           loading="lazy"
           referrerpolicy="strict-origin-when-cross-origin"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
           allowfullscreen></iframe>
+        {% if bvid != "" %}
+          <button
+            class="research-video__play-trigger"
+            type="button"
+            data-research-video-play
+            aria-label="{{ video_check_label | escape }}: {{ project.title | escape }}"
+            hidden>
+            <span class="research-video__play-trigger-content">
+              <i class="fas fa-spinner fa-spin" data-research-video-play-icon aria-hidden="true"></i>
+              <span data-research-video-play-label>{{ video_check_label }}</span>
+            </span>
+          </button>
+        {% endif %}
       </div>
     {% elsif bvid != "" %}
       <div class="research-video__embed">
@@ -150,6 +196,14 @@
         <i class="fas fa-play-circle" aria-hidden="true"></i>
         <span>Video coming soon</span>
       </div>
+    {% endif %}
+    {% if youtube_id != "" and bvid != "" %}
+      <p
+        class="research-video__status"
+        data-research-video-status
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"></p>
     {% endif %}
   </div>
 

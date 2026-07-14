@@ -1098,6 +1098,23 @@ html.award-lightbox-open body {
   }
 }
 
+.research-video__status {
+  margin: 0.65em 0 0;
+  padding: 0.55em 0.7em;
+  color: mix(#000, $warning-color, 45%);
+  background: rgba($warning-color, 0.12);
+  border-left: 3px solid $warning-color;
+  border-radius: 3px;
+  font-size: 0.82em;
+
+  &:empty {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+  }
+}
+
 .research-video__embed,
 .research-video__placeholder {
   width: 100%;
@@ -1108,11 +1125,62 @@ html.award-lightbox-open body {
   box-shadow: 0 6px 20px rgba(#000, 0.14);
 }
 
+.research-video__embed {
+  position: relative;
+}
+
 .research-video__embed iframe {
   display: block;
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+.research-video__play-trigger {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: #fff;
+  background: rgba(#000, 0.16);
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+
+  &[hidden] {
+    display: none;
+  }
+
+  &:disabled {
+    cursor: progress;
+  }
+
+  &:focus-visible {
+    outline: 4px solid $warning-color;
+    outline-offset: -4px;
+  }
+}
+
+.research-video__play-trigger-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55em;
+  padding: 0.7em 1em;
+  background: rgba(#111, 0.9);
+  border: 1px solid rgba(#fff, 0.38);
+  border-radius: 999px;
+  box-shadow: 0 4px 16px rgba(#000, 0.3);
+  font-size: 0.92em;
+  font-weight: 700;
+
+  i {
+    color: #fff;
+  }
 }
 
 .research-video__placeholder {
