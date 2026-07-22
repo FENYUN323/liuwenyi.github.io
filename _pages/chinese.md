@@ -12,13 +12,13 @@ lang: zh-CN
 
 我的研究聚焦于**机器人导航、规划与控制、集群机器人、无人机（UAV）、空中操作、具身智能以及基于激光雷达的感知**。我尤其关注如何构建能够在复杂、动态和不确定环境中可靠运行的自主机器人系统。
 
-以第一作者或共同第一作者身份，我已发表 **4 篇期刊论文**，其中 1 篇发表于 <span class="journal-highlight"><em>Nature Communications</em></span>，2 篇发表于 <span class="journal-highlight"><em>IEEE Transactions on Field Robotics</em></span>，1 篇发表于 <span class="journal-highlight"><em>IEEE Robotics and Automation Letters</em></span>。此外，我还以共同作者身份发表了 **4 篇期刊论文**，其中 2 篇发表于 <span class="journal-highlight"><em>IEEE Transactions on Robotics</em></span>，1 篇发表于 <span class="journal-highlight"><em>The International Journal of Robotics Research</em></span>，1 篇发表于 <span class="journal-highlight"><em>Advanced Intelligent Systems</em></span>。
+以第一作者或共同第一作者身份，我已发表 **4 篇期刊论文**，其中 1 篇发表于 <span class="journal-highlight"><em>Nature Communications</em></span>，2 篇发表于 <span class="journal-highlight"><em>IEEE Transactions on Field Robotics</em></span>，1 篇发表于 <span class="journal-highlight"><em>IEEE Robotics and Automation Letters</em></span>。此外，我还以共同作者身份发表了 **5 篇期刊论文**，其中 3 篇发表于 <span class="journal-highlight"><em>IEEE Transactions on Robotics</em></span>，1 篇发表于 <span class="journal-highlight"><em>The International Journal of Robotics Research</em></span>，1 篇发表于 <span class="journal-highlight"><em>Advanced Intelligent Systems</em></span>。
 
 在加入香港大学之前，我于 2022 年获得[哈尔滨工业大学（深圳）](https://www.hitsz.edu.cn/)通信工程专业工学学士学位。我的本科毕业论文研究无人机高速移动起降的轨迹规划，并获评<span class="about-award-highlight">优秀毕业论文奖</span>。
 
 本科期间，2021 年我担任 Critical HIT 机器人队**副队长**，与团队成员共同夺得 **ICRA RoboMaster AI Challenge 全球冠军**。2022 年，我担任**队长**，带领团队成功<span class="about-award-highlight">卫冕全球冠军</span>。
 
-[谷歌学术](https://scholar.google.com/citations?user=vtPuO3kAAAAJ) · [GitHub](https://github.com/FENYUN323) · [哔哩哔哩](https://space.bilibili.com/1679529247?spm_id_from=333.337.0.0) · [油管](https://www.youtube.com/@fenyun323) · [领英](https://www.linkedin.com/in/wenyi-liu-0062032a5/) · [下载简历]({{ site.baseurl }}/files/CV_Wenyi_Liu.pdf)
+[谷歌学术](https://scholar.google.com/citations?user=vtPuO3kAAAAJ) · [GitHub](https://github.com/FENYUN323) · [哔哩哔哩](https://space.bilibili.com/1679529247?spm_id_from=333.337.0.0) · [油管](https://www.youtube.com/@fenyun323) · [领英](https://www.linkedin.com/in/wenyi-liu-0062032a5/)
 
 ## 精选论文
 

@@ -20,7 +20,6 @@ The site is based on Academic Pages / Minimal Mistakes and is configured for:
 | Chinese introduction | `_pages/chinese.md` |
 | Publications | `_pages/publications.md` |
 | Web CV | `_pages/cv.md` |
-| Downloadable CV | `files/CV_Wenyi_Liu.pdf` |
 | Research projects | `_portfolio/` |
 | Teaching experience | `_teaching/` |
 | Profile photo | `images/profile.jpg` |
@@ -89,7 +88,6 @@ If the GitHub username or repository name changes, update `url` and `repository`
 ## Routine updates
 
 - Replace `images/profile.jpg` to update the profile photo while keeping the same filename.
-- Replace `files/CV_Wenyi_Liu.pdf` to update the downloadable CV.
 - Edit `_pages/publications.md` when adding a publication.
 - Add or edit Markdown files in `_portfolio/` for research projects.
 - Run the local production build before pushing significant changes.

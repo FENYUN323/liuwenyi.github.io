@@ -13,3 +13,6 @@ package-lock.json
 
 # Ignore local debug logs
 *.log
+
+# Keep the private CV PDF out of the public repository
+/files/CV_Wenyi_Liu.pdf

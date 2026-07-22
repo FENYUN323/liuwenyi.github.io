@@ -29,7 +29,7 @@ You can also find my publications on [Google Scholar](https://scholar.google.com
 
 8. F. Zhu\*, Y. Ren\*, L. Yin, F. Kong, Q. Liu, R. Xue, **Wenyi Liu**, Y. Cai, G. Lu, H. Li, and F. Zhang. “Swarm-LIO2: Decentralized Efficient LiDAR-Inertial Odometry for Aerial Swarm Systems.” *IEEE Transactions on Robotics*, 2024. [Paper](https://ieeexplore.ieee.org/document/10816004) · [Code](https://github.com/hku-mars/Swarm-LIO2) · [Video](https://www.bilibili.com/video/BV1vTsMeqEQm)
 
-9. L. Yin, Y. Ren, F. Zhu, L. Shi, F. Kong, B. Tang, **Wenyi Liu**, X. Lyu, and F. Zhang. “Visibility-aware Cooperative Aerial Tracking with Decentralized LiDAR-based Swarms.” *IEEE Transactions on Robotics*, under review.
+9. L. Yin, Y. Ren, F. Zhu, L. Shi, F. Kong, B. Tang, **Wenyi Liu**, X. Lyu, and F. Zhang. “Visibility-aware Cooperative Aerial Tracking with Decentralized LiDAR-based Swarms.” *IEEE Transactions on Robotics*, 2026. [Paper](https://arxiv.org/pdf/2512.01280) · [Video](https://www.bilibili.com/video/BV1tPKa6HE8z)
 
 10. B. Tang, Y. Ren, Y. Cai, F. Kong, **Wenyi Liu**, F. Zhu, L. Yin, L. Shi, and F. Zhang. “Memory-Efficient Boundary Map for Large-Scale Occupancy Grid Mapping.” *The International Journal of Robotics Research*, 2026. [Paper](https://journals.sagepub.com/doi/10.1177/02783649261425266) · [Code](https://github.com/hku-mars/boundary_map) · [Video](https://www.bilibili.com/video/BV1sQPkzpEGk)
 

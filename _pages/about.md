@@ -11,13 +11,13 @@ I am **Wenyi Liu**, a Ph.D. candidate in Robotics at the [University of Hong Kon
 
 My research focuses on **robot navigation, planning and control, swarm robotics, uncrewed aerial vehicles (UAVs), aerial manipulation, embodied AI, and LiDAR-based perception**. I am particularly interested in building autonomous robot systems that can operate reliably in cluttered, dynamic, and uncertain environments.
 
-As a first or co-first author, I have published **four journal papers**, including one in <span class="journal-highlight"><em>Nature Communications</em></span>, two in <span class="journal-highlight"><em>IEEE Transactions on Field Robotics</em></span>, and one in <span class="journal-highlight"><em>IEEE Robotics and Automation Letters</em></span>. I have also co-authored **four journal papers**, including two in <span class="journal-highlight"><em>IEEE Transactions on Robotics</em></span>, one in <span class="journal-highlight"><em>The International Journal of Robotics Research</em></span>, and one in <span class="journal-highlight"><em>Advanced Intelligent Systems</em></span>.
+As a first or co-first author, I have published **four journal papers**, including one in <span class="journal-highlight"><em>Nature Communications</em></span>, two in <span class="journal-highlight"><em>IEEE Transactions on Field Robotics</em></span>, and one in <span class="journal-highlight"><em>IEEE Robotics and Automation Letters</em></span>. I have also co-authored **five journal papers**, including three in <span class="journal-highlight"><em>IEEE Transactions on Robotics</em></span>, one in <span class="journal-highlight"><em>The International Journal of Robotics Research</em></span>, and one in <span class="journal-highlight"><em>Advanced Intelligent Systems</em></span>.
 
 Before joining HKU, I received my B.Eng. in Communication Engineering from [Harbin Institute of Technology, Shenzhen](https://www.hitsz.edu.cn/) in 2022. My undergraduate thesis studied trajectory planning for high-speed mobile takeoff and landing of UAVs and received an <span class="about-award-highlight">Outstanding Thesis Award</span>.
 
 During my undergraduate studies, I served as **vice captain** of the Critical HIT robotics team in 2021 and, together with my teammates, won the **ICRA RoboMaster AI Challenge World Championship**. In 2022, I became **team captain** and led the team to successfully <span class="about-award-highlight">defend the world championship title</span>.
 
-[Google Scholar](https://scholar.google.com/citations?user=vtPuO3kAAAAJ) · [GitHub](https://github.com/FENYUN323) · [Bilibili](https://space.bilibili.com/1679529247?spm_id_from=333.337.0.0) · [YouTube](https://www.youtube.com/@fenyun323) · [Linkedin](https://www.linkedin.com/in/wenyi-liu-0062032a5/) · [Download CV]({{ site.baseurl }}/files/CV_Wenyi_Liu.pdf)
+[Google Scholar](https://scholar.google.com/citations?user=vtPuO3kAAAAJ) · [GitHub](https://github.com/FENYUN323) · [Bilibili](https://space.bilibili.com/1679529247?spm_id_from=333.337.0.0) · [YouTube](https://www.youtube.com/@fenyun323) · [Linkedin](https://www.linkedin.com/in/wenyi-liu-0062032a5/)
 
 ## Selected Publications
 

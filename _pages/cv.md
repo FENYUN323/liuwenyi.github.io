@@ -7,8 +7,6 @@ redirect_from:
   - /resume
 ---
 
-[Download the full CV (PDF)]({{ site.baseurl }}/files/CV_Wenyi_Liu.pdf)
-
 ## Contact
 
 - Hong Kong, China
