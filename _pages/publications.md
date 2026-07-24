@@ -17,7 +17,7 @@ You can also find my publications on [Google Scholar](https://scholar.google.com
 
 3. **Wenyi Liu**\*, Y. Ren\*, and F. Zhang. “Integrated planning and control for quadrotor navigation in presence of suddenly appearing objects and disturbances.” *IEEE Robotics and Automation Letters*, 2024. [Paper](https://ieeexplore.ieee.org/abstract/document/10238764) · [Code](https://github.com/hku-mars/IPC) · [Video](https://www.bilibili.com/video/BV1NM4y117TH)
 
-4. **Wenyi Liu**\*, L. Shi\*, Y. Geng, Y. Zhu, X. Han, Y. Jiang, H. Wu, Y. Zou, L. Yin, N. Chen, L. Jia, Y. Qin, Z. Wang, Q. Wang, F. Miao, C. Zhao, and F. Zhang. “DIRECT: A digital reflex for UAV navigation in clutter under uncertain disturbances.” Under review. [Video](https://youtu.be/A1KgZRGSbpo)
+4. **Wenyi Liu**\*, L. Shi\*, Y. Geng, Y. Zhu, X. Han, Y. Jiang, H. Wu, Y. Zou, L. Yin, N. Chen, L. Jia, Y. Qin, Z. Wang, Q. Wang, F. Miao, C. Zhao, and F. Zhang. “DIRECT: A digital reflex for UAV navigation in clutter under uncertain disturbances.” Under review.
 
 5. L. Shi\*, **Wenyi Liu**\*, X. Han, Y. Ren, L. Yin, F. Zhu, N. Chen, and F. Zhang. “Traversing the Untraversable: Enabling UAV Navigation in the Extremely Dense Wild by Contact-driven Adaptation.” *IEEE Transactions on Field Robotics*, 2026. [Paper](https://ieeexplore.ieee.org/document/11573071) · [Video](https://youtu.be/C_Iw6WcDexE)
 
