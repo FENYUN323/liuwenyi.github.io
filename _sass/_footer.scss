@@ -58,6 +58,47 @@
   font-size: $type-size-7;
 }
 
+.global-visitors {
+  width: 100%;
+  max-width: 800px;
+  margin: 1.25em auto 1.5em;
+  text-align: center;
+}
+
+.global-visitors__title {
+  margin: 0 0 0.75em;
+  color: $dark-gray;
+  font-family: $header-font-family;
+  font-size: $type-size-4;
+}
+
+.global-visitors__map {
+  display: block;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 1px 5px rgba(#000, 0.12);
+  line-height: 0;
+
+  &:hover {
+    box-shadow: 0 2px 9px rgba(#000, 0.18);
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border: 0;
+  }
+}
+
+.global-visitors__note {
+  margin: 0.65em 0 0;
+  font-family: $global-font-family;
+  font-size: $type-size-7;
+}
+
 .page__footer-follow {
   ul {
     margin: 0;

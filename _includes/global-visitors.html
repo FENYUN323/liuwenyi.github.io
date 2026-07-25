@@ -1,0 +1,26 @@
+{% assign flagcounter_id = "Sjso" %}
+
+<section class="global-visitors" aria-labelledby="global-visitors-title">
+  <h2 class="global-visitors__title" id="global-visitors-title">
+    {% if page.lang == "zh-CN" %}全球访客{% else %}Global Visitors{% endif %}
+  </h2>
+
+  <a
+    class="global-visitors__map"
+    href="https://info.flagcounter.com/{{ flagcounter_id }}"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="{% if page.lang == 'zh-CN' %}查看全球访客统计详情{% else %}View detailed global visitor statistics{% endif %}">
+    <img
+      src="https://s01.flagcounter.com/map/{{ flagcounter_id }}/size_l/txt_555555/border_D9E2EA/pageviews_1/viewers_3/flags_0/"
+      width="800"
+      height="375"
+      decoding="async"
+      fetchpriority="low"
+      alt="{% if page.lang == 'zh-CN' %}按国家和地区显示访问来源的世界地图{% else %}World map showing visitor countries and regions{% endif %}">
+  </a>
+
+  <p class="global-visitors__note">
+    {% if page.lang == "zh-CN" %}自 2026 年 7 月起的国家/地区访问记录。{% else %}Country-level visits since July 2026.{% endif %}
+  </p>
+</section>
