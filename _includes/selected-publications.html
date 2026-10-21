@@ -27,7 +27,9 @@
           <a href="{{ publication.paper }}">{{ publication.title }}</a>
         </h3>
         <p class="selected-pub__authors">{{ publication_authors }}</p>
-        <p class="selected-pub__venue"><em>{{ publication.venue }}</em>, {% if publication_language == "zh" and publication.year == "under review" %}审稿中{% else %}{{ publication.year }}{% endif %}</p>
+        <p class="selected-pub__venue">
+          <em>{{ publication.venue }}</em>{% if publication.year %}, {% if publication_language == "zh" and publication.year == "under review" %}审稿中{% else %}{{ publication.year }}{% endif %}{% endif %}
+        </p>
         <p class="selected-pub__links">
           {% for link in publication.links %}
             {% assign link_label = link.label %}

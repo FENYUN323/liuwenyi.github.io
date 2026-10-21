@@ -21,7 +21,7 @@ You can also find my publications on [Google Scholar](https://scholar.google.com
 
 5. L. Shi\*, **Wenyi Liu**\*, X. Han, Y. Ren, L. Yin, F. Zhu, N. Chen, and F. Zhang. “Traversing the Untraversable: Enabling UAV Navigation in the Extremely Dense Wild by Contact-driven Adaptation.” *IEEE Transactions on Field Robotics*, 2026. [Paper](https://ieeexplore.ieee.org/document/11573071) · [Video](https://youtu.be/C_Iw6WcDexE)
 
-6. H. Wu\*, **Wenyi Liu**\*, Y. Ren, Z. Liu, H. Wei, F. Zhu, H. Li, and F. Zhang. “Flying through cluttered and dynamic environments with LiDAR.” *Advanced Intelligent Systems*, under review. [Paper](https://arxiv.org/abs/2504.17569)
+6. H. Wu\*, **Wenyi Liu**\*, Y. Ren, Z. Liu, H. Wei, F. Zhu, H. Li, and F. Zhang. “Flying through cluttered and dynamic environments with LiDAR.” *Advanced Intelligent Systems*. [Paper](https://arxiv.org/abs/2504.17569)
 
 ## Co-authored Publications
 
