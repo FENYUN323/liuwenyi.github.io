@@ -6,6 +6,15 @@
     {% if publication_language == "zh" %}
       {% assign publication_authors = publication_authors | replace: "Wenyi Liu", "刘文熠" %}
     {% endif %}
+    {% assign publication_year = publication.year %}
+    {% if publication_language == "zh" %}
+      {% case publication.year %}
+        {% when "under review" %}
+          {% assign publication_year = "审稿中" %}
+        {% when "accepted" %}
+          {% assign publication_year = "已接收" %}
+      {% endcase %}
+    {% endif %}
     <article class="selected-pub">
       <a class="selected-pub__media" href="{{ publication.paper }}" aria-label="{% if publication_language == 'zh' %}查看论文：{% else %}View paper: {% endif %}{{ publication.title }}">
         <video
@@ -28,7 +37,7 @@
         </h3>
         <p class="selected-pub__authors">{{ publication_authors }}</p>
         <p class="selected-pub__venue">
-          <em>{{ publication.venue }}</em>{% if publication.year %}, {% if publication_language == "zh" and publication.year == "under review" %}审稿中{% else %}{{ publication.year }}{% endif %}{% endif %}
+          <em>{{ publication.venue }}</em>{% if publication.year %}, {{ publication_year }}{% endif %}
         </p>
         <p class="selected-pub__links">
           {% for link in publication.links %}
