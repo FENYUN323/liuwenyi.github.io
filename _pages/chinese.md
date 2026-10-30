@@ -12,7 +12,7 @@ lang: zh-CN
 
 我的研究聚焦于**机器人导航、规划与控制、集群机器人、无人机（UAV）、空中操作、具身智能以及基于激光雷达的感知**。我尤其关注如何构建能够在复杂、动态和不确定环境中可靠运行的自主机器人系统。
 
-以第一作者或共同第一作者身份，我已发表 **4 篇期刊论文**，其中 1 篇发表于 <span class="journal-highlight"><em>Nature Communications</em></span>，2 篇发表于 <span class="journal-highlight"><em>IEEE Transactions on Field Robotics</em></span>，1 篇发表于 <span class="journal-highlight"><em>IEEE Robotics and Automation Letters</em></span>；另有 **1 篇期刊论文已被 <span class="journal-highlight"><em>Advanced Intelligent Systems</em></span> 接收**。此外，我还以共同作者身份发表了 **5 篇期刊论文**，其中 3 篇发表于 <span class="journal-highlight"><em>IEEE Transactions on Robotics</em></span>，1 篇发表于 <span class="journal-highlight"><em>The International Journal of Robotics Research</em></span>，1 篇发表于 <span class="journal-highlight"><em>Advanced Intelligent Systems</em></span>。
+以第一作者或共同第一作者身份，我共有 **5 篇期刊论文**——其中 4 篇已发表（1 篇发表于 <span class="journal-highlight"><em>Nature Communications</em></span>，2 篇发表于 <span class="journal-highlight"><em>IEEE Transactions on Field Robotics</em></span>，1 篇发表于 <span class="journal-highlight"><em>IEEE Robotics and Automation Letters</em></span>），另有 1 篇已被 <span class="journal-highlight"><em>Advanced Intelligent Systems</em></span> 接收。此外，我还以共同作者身份发表了 **5 篇期刊论文**，其中 3 篇发表于 <span class="journal-highlight"><em>IEEE Transactions on Robotics</em></span>，1 篇发表于 <span class="journal-highlight"><em>The International Journal of Robotics Research</em></span>，1 篇发表于 <span class="journal-highlight"><em>Advanced Intelligent Systems</em></span>。
 
 此外，我还有 **4 篇论文正在审稿中**。
 
