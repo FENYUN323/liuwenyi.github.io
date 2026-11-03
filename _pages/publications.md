@@ -42,5 +42,3 @@ You can also find my publications on [Google Scholar](https://scholar.google.com
 2. **Wenyi Liu**\*, L. Shi\*, J. Yao, Y. Gan, and Z. Yu. “Integrated Planning and Control for Differential-Drive Navigation in Confined Spaces on Resource-Constrained Platforms.” Under review. [Video](https://youtu.be/eLfNiQzsOgo)
 
 3. L. Shi\*, **Wenyi Liu**\*, Y. Zhu, L. Yin, and F. Zhang. “A Compact Aerial Manipulator Enabling Omnidirectional Reachability and Safe High-Precision Field Operations.” Under review. [Video](https://youtu.be/qBQwwZhCH2k)
-
-4. S. Peng, Z. Yu, **Wenyi Liu**, Z. Xie, C. Zhang, and C. Jiang. “ReCoNav: Reliable Constrained Long-Horizon Vision-and-Language Navigation via a Determination Engine.” Under review.
