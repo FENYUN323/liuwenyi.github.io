@@ -16,7 +16,7 @@ lang: zh-CN
 
 此外，我还有 **4 篇论文正在审稿中**。
 
-在加入香港大学之前，我于 2022 年获得[哈尔滨工业大学（深圳）](https://www.hitsz.edu.cn/)通信工程专业工学学士学位，本科导师为张钦宇教授。我的本科毕业论文研究无人机高速移动起降的轨迹规划，并获评<span class="about-award-highlight">优秀毕业论文奖</span>。
+在加入香港大学之前，我于 2022 年获得[哈尔滨工业大学（深圳）](https://www.hitsz.edu.cn/)通信工程专业工学学士学位，本科导师为[张钦宇教授](https://homepage.hit.edu.cn/zhangqinyu)。我的本科毕业论文研究无人机高速移动起降的轨迹规划，并获评<span class="about-award-highlight">优秀毕业论文奖</span>。
 
 本科期间，2021 年我担任 Critical HIT 机器人队**副队长**，与团队成员共同夺得 **ICRA RoboMaster AI Challenge 全球冠军**。2022 年，我担任**队长**，带领团队成功<span class="about-award-highlight">卫冕全球冠军</span>。
 

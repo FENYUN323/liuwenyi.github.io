@@ -29,7 +29,7 @@ redirect_from:
 
 **September 2018–June 2022 · Shenzhen, China**
 
-- Supervisor: Prof. Qinyu Zhang
+- Supervisor: [Prof. Qinyu Zhang](https://homepage.hit.edu.cn/zhangqinyu)
 - Undergraduate thesis: *Trajectory Planning for High-Speed Mobile Takeoff and Landing of UAVs*
 - Outstanding Thesis Award
 - Outstanding Student Scholarship, 2018–2021

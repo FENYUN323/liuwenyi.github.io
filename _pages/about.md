@@ -15,7 +15,7 @@ As a first or co-first author, I have **five journal papers** (one in <span clas
 
 I also have **four additional manuscripts under review**.
 
-Before joining HKU, I received my B.Eng. in Communication Engineering from [Harbin Institute of Technology, Shenzhen](https://www.hitsz.edu.cn/) in 2022, where I was supervised by Prof. Qinyu Zhang. My undergraduate thesis studied trajectory planning for high-speed mobile takeoff and landing of UAVs and received an <span class="about-award-highlight">Outstanding Thesis Award</span>.
+Before joining HKU, I received my B.Eng. in Communication Engineering from [Harbin Institute of Technology, Shenzhen](https://www.hitsz.edu.cn/) in 2022, where I was supervised by [Prof. Qinyu Zhang](https://homepage.hit.edu.cn/zhangqinyu). My undergraduate thesis studied trajectory planning for high-speed mobile takeoff and landing of UAVs and received an <span class="about-award-highlight">Outstanding Thesis Award</span>.
 
 During my undergraduate studies, I served as **vice captain** of the Critical HIT robotics team in 2021 and, together with my teammates, won the **ICRA RoboMaster AI Challenge World Championship**. In 2022, I became **team captain** and led the team to successfully <span class="about-award-highlight">defend the world championship title</span>.
 
