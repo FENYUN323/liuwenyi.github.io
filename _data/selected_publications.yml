@@ -9,6 +9,8 @@
   links:
     - label: "Paper"
       url: "https://www.nature.com/articles/s41467-025-62801-y"
+    - label: "arXiv"
+      url: "https://arxiv.org/abs/2409.13985"
     - label: "Code"
       url: "https://github.com/hku-mars/slope_inspection"
     - label: "Video"
@@ -25,6 +27,8 @@
   links:
     - label: "Paper"
       url: "https://ieeexplore.ieee.org/document/11145926"
+    - label: "arXiv"
+      url: "https://arxiv.org/abs/2503.22921"
     - label: "Video"
       url: "https://www.bilibili.com/video/BV1rUawzgE9c"
 
@@ -61,11 +65,15 @@
 - title: "Flying through cluttered and dynamic environments with LiDAR"
   authors: "Huajie Wu<sup>*</sup>, <strong>Wenyi Liu</strong><sup>*</sup>, Yunfan Ren, Zheng Liu, Hairuo Wei, Fangcheng Zhu, Haotian Li, and Fu Zhang"
   venue: "Advanced Intelligent Systems"
-  year: "accepted"
-  paper: "https://arxiv.org/abs/2504.17569"
+  year: "2026"
+  paper: "https://advanced.onlinelibrary.wiley.com/doi/10.1002/aisy.70626"
   video: "/images/publications/flying-dynamic-lidar.mp4"
   poster: "/images/publications/flying-dynamic-lidar.jpg"
   media_alt: "LiDAR quadrotor avoiding a moving object in a cluttered forest"
   links:
     - label: "Paper"
+      url: "https://advanced.onlinelibrary.wiley.com/doi/10.1002/aisy.70626"
+    - label: "arXiv"
       url: "https://arxiv.org/abs/2504.17569"
+    - label: "Video"
+      url: "https://drive.google.com/file/d/1QomE1BGOH_0Fdtbfhiw5IRY4v53jy2eb/view"
